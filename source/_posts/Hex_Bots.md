@@ -1,5 +1,6 @@
 ---
 title: Hex
+date: 2023-10-27 10:22:14
 tags: 【GAME】
 cover: https://raw.githubusercontent.com/MaggieRuyi/MaggieRuyi.github.io/src/image/hex.png
 ---

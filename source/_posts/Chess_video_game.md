@@ -1,5 +1,6 @@
 ---
 title: Chess Video Game
+date: 2023-10-27 08:38:44
 tags: 【GAME】
 cover: https://raw.githubusercontent.com/MaggieRuyi/MaggieRuyi.github.io/src/image/Chess.png
 ---

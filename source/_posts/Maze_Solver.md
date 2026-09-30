@@ -1,5 +1,6 @@
 ---
 title: Maze Solver
+date: 2023-10-27 08:30:56
 tags: 【GAME】
 cover: https://raw.githubusercontent.com/MaggieRuyi/MaggieRuyi.github.io/src/image/maze.png
 ---

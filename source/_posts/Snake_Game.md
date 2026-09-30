@@ -1,5 +1,6 @@
 ---
 title: Snake Game
+date: 2023-10-27 09:00:24
 tags: 【GAME】
 cover: https://raw.githubusercontent.com/MaggieRuyi/MaggieRuyi.github.io/src/image/snake.jpeg
 ---

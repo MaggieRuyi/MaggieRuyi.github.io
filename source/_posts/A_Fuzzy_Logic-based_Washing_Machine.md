@@ -1,5 +1,6 @@
 ---
 title: A Fuzzy Logic-based Washing Machine
+date: 2023-10-27 09:18:07
 tags: 【System】
 cover: https://raw.githubusercontent.com/MaggieRuyi/MaggieRuyi.github.io/src/image/wash.jpeg
 ---
