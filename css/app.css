@@ -5690,3 +5690,18 @@ span.label {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
+html:not([data-lang="zh"]) .lang-zh,
+html[data-lang="zh"] .lang-en {
+  display: none !important;
+}
+#nav .right .item.lang {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95em;
+  min-width: 2em;
+  text-align: center;
+}
+#sidebar .author .image {
+  -o-object-fit: cover;
+     object-fit: cover;
+}

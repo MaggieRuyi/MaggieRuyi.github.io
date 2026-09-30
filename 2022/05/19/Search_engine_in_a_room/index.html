@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var l=localStorage.getItem('lang');if(l!=='zh'&&l!=='en'){l=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en'}document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l==='zh'?'zh-CN':'en')})()</script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#FFF">
@@ -60,7 +61,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">Search Engine
+  <h1 itemprop="name headline"><span class="lang-en">Search Engine</span><span class="lang-zh">房间里的搜索引擎</span>
   </h1>
   
 <div class="meta">
@@ -68,7 +69,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <span class="text">Posted on</span>
+    <span class="text"><span class="lang-en">Posted on</span><span class="lang-zh">发表于</span></span>
     <time itemprop="dateCreated datePublished" datetime="2022-05-19T12:07:27+08:00">2022-05-19</time>
   </span>
 </div>
@@ -89,6 +90,9 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
       <li class="item title"><a href="/" rel="start">Ruyi Zhang</a></li>
     </ul>
     <ul class="right">
+      <li class="item lang" title="English / 中文" role="button" tabindex="0" aria-label="Switch language / 切换语言">
+        <span class="lang-en">中</span><span class="lang-zh">EN</span>
+      </li>
       <li class="item theme">
         <i class="ic i-sun"></i>
       </li>
@@ -125,7 +129,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
     
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
-<span><a href="/">Home</a></span>
+<span><a href="/"><span class="lang-en">Home</span><span class="lang-zh">首页</span></a></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
@@ -144,7 +148,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
   <div class="body md" itemprop="articleBody">
     
 
-    <hr>
+    <div class="lang-en">
 <h1 id="search-engine-in-a-room-bob"><a class="markdownIt-Anchor" href="#search-engine-in-a-room-bob">#</a> Search Engine In a Room (Bob)</h1>
 <hr>
 <h2 id="prolog"><a class="markdownIt-Anchor" href="#prolog">#</a> Prolog</h2>
@@ -154,21 +158,32 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <p>3.Logical Inference: Prolog uses a form of logical inference called backward chaining. When you query a Prolog program with a question or a goal, the system works backward through the rules and facts to find a solution. It explores the rules to determine how to satisfy the query.</p>
 <p>4.Pattern Matching: Prolog uses pattern matching to unify terms. Unification is the process of matching variables in rules and facts to find a consistent set of values that satisfy the query.</p>
 <p>5.Recursion: Recursion is a fundamental concept in Prolog. It allows you to express repetitive operations and solve problems through recursive rules and queries.</p>
-<p>6.return multiple solutions to a query if they exist. This feature is useful for exploring various possibilities.</p>
+<p>6.Backtracking: Prolog can return multiple solutions to a query if they exist. This feature is useful for exploring various possibilities.</p>
 <p>7.Applications: Prolog is commonly used in fields such as natural language processing, expert systems, knowledge representation, and constraint logic programming. It is also employed in areas like decision support systems and semantic web applications.</p>
 <p>8.Syntax: Prolog programs consist of clauses, which include facts and rules. Clauses end with periods. Variables are represented with uppercase letters, and atoms (constants) start with lowercase letters. Predicates are used to define relationships and goals.</p>
 <p>Here’s a simple example in Prolog:</p>
-<p>prolog<br>
-Copy code<br>
-/* Facts */<br>
-mammal(cat).<br>
-mammal(dog).</p>
-<p>/* Rules */<br>
-has_fur(X) :- mammal(X).</p>
-<p>/* Query */<br>
-?- has_fur(cat).<br>
-In this example, we have defined facts (mammals are cat and dog) and a rule (has_fur) that relates mammals to the presence of fur. The query “?- has_fur(cat).” asks whether a cat has fur, and Prolog would respond with “true” based on the facts and rules provided.</p>
-<p>! <span class="exturl" data-url="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL01hZ2dpZVJ1eWkvTWFnZ2llUnV5aS5naXRodWIuaW8vc3JjL2ltYWdlL3Byb2xvZy5wbmc="></span></p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Facts */</span></span><br><span class="line">mammal(cat).</span><br><span class="line">mammal(dog).</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Rules */</span></span><br><span class="line">has_fur(<span class="symbol">X</span>) :- mammal(<span class="symbol">X</span>).</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Query */</span></span><br><span class="line">?- has_fur(cat).</span><br></pre></td></tr></table></figure>
+<p>In this example, we have defined facts (mammals are cat and dog) and a rule (has_fur) that relates mammals to the presence of fur. The query “?- has_fur(cat).” asks whether a cat has fur, and Prolog would respond with “true” based on the facts and rules provided.</p>
+<p><img data-src="https://raw.githubusercontent.com/MaggieRuyi/MaggieRuyi.github.io/src/image/prolog.png" alt=""></p>
+</div>
+<div class="lang-zh">
+<h1 id="房间里的搜索引擎bob"><a class="markdownIt-Anchor" href="#房间里的搜索引擎bob">#</a> 房间里的搜索引擎（Bob）</h1>
+<hr>
+<h2 id="prolog-2"><a class="markdownIt-Anchor" href="#prolog-2">#</a> Prolog</h2>
+<p>Prolog 是一种高级编程语言，主要用于符号推理与符号处理，尤其适合人工智能和知识表示相关的任务。下面是对 Prolog 的基本介绍：</p>
+<p>1. 声明式语言：Prolog 是一种声明式语言，也就是说，你只需描述要解决的问题，而不必逐步指定求解过程。你只要说明想达成什么，Prolog 的推理引擎就会自己找出实现的方法。</p>
+<p>2. 基于规则：在 Prolog 中，你需要定义规则（rules）和事实（facts）。规则描述关系和条件，事实则提供具体信息。程序正是通过这些规则和事实来表示知识和关系的。</p>
+<p>3. 逻辑推理：Prolog 采用一种称为反向链接（backward chaining）的逻辑推理方式。当你向 Prolog 程序提出一个问题或目标时，系统会沿着规则和事实反向推导来寻找解，通过探索规则来确定如何满足该查询。</p>
+<p>4. 模式匹配：Prolog 使用模式匹配来对项进行合一（unification）。合一是指将规则和事实中的变量进行匹配，找到一组能满足查询的一致取值。</p>
+<p>5. 递归：递归是 Prolog 的核心概念之一。它让你能够表达重复性的操作，并通过递归规则和查询来解决问题。</p>
+<p>6. 回溯：如果存在多个解，Prolog 可以为一个查询返回多个解。这一特性便于探索各种可能性。</p>
+<p>7. 应用：Prolog 常用于自然语言处理、专家系统、知识表示和约束逻辑编程等领域，也应用于决策支持系统和语义网等方面。</p>
+<p>8. 语法：Prolog 程序由子句（clauses）组成，子句包括事实和规则，并以句点结尾。变量以大写字母开头，原子（常量）以小写字母开头。谓词用于定义关系和目标。</p>
+<p>下面是一个简单的 Prolog 示例：</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 事实 */</span></span><br><span class="line">mammal(cat).</span><br><span class="line">mammal(dog).</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 规则 */</span></span><br><span class="line">has_fur(<span class="symbol">X</span>) :- mammal(<span class="symbol">X</span>).</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 查询 */</span></span><br><span class="line">?- has_fur(cat).</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，我们定义了事实（猫和狗是哺乳动物）以及一条规则（has_fur），将哺乳动物与 “有毛” 这一属性联系起来。查询 “?- has_fur (cat).” 询问猫是否有毛，Prolog 会根据给定的事实和规则回答 “true”。</p>
+<p><img data-src="https://raw.githubusercontent.com/MaggieRuyi/MaggieRuyi.github.io/src/image/prolog.png" alt=""></p>
+</div>
 
       <div class="tags">
           <a href="/tags/%E3%80%90System%E3%80%91/" rel="tag"><i class="ic i-tag"></i> 【System】</a>
@@ -183,14 +198,14 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2026-09-30 14:45:36" itemprop="dateModified" datetime="2026-09-30T14:45:36+08:00">2026-09-30</time>
+    <time title="Modified: 2026-09-30 20:50:16" itemprop="dateModified" datetime="2026-09-30T20:50:16+08:00">2026-09-30</time>
   </span>
 </div>
 
       
 <div class="reward">
-  <button><i class="ic i-heartbeat"></i> Donate</button>
-  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <button><i class="ic i-heartbeat"></i> <span class="lang-en">Donate</span><span class="lang-zh">赞赏</span></button>
+  <p><span class="lang-en">Give me a cup of [coffee]~(￣▽￣)~*</span><span class="lang-zh">请我喝[茶]~(￣▽￣)~*</span></p>
   <div id="qr">
       
       <div>
@@ -215,14 +230,14 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
 <div id="copyright">
 <ul>
   <li class="author">
-    <strong>Post author:  </strong>Ruyi Zhang <i class="ic i-at"><em>@</em></i>Maggie's Rose Garden
+    <strong><span class="lang-en">Post author</span><span class="lang-zh">本文作者</span>:  </strong>Ruyi Zhang <i class="ic i-at"><em>@</em></i>Maggie's Rose Garden
   </li>
   <li class="link">
-    <strong>Post link: </strong>
+    <strong><span class="lang-en">Post link</span><span class="lang-zh">本文链接</span>: </strong>
     <a href="http://maggieruyi.github.io/2022/05/19/Search_engine_in_a_room/" title="Search Engine">http://maggieruyi.github.io/2022/05/19/Search_engine_in_a_room/</a>
   </li>
   <li class="license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+    <strong><span class="lang-en">Copyright Notice</span><span class="lang-zh">版权声明</span>:  </strong><span class="lang-en">All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.</span><span class="lang-zh">本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</span>
   </li>
 </ul>
 </div>
@@ -239,9 +254,9 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
       
 
   <a href="/2022/04/15/Interactive_Systems/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;MaggieRuyi&#x2F;MaggieRuyi.github.io&#x2F;src&#x2F;image&#x2F;interactive.jpeg" title="Interactive Systems">
-  <span class="type">Previous Post</span>
+  <span class="type"><span class="lang-en">Previous Post</span><span class="lang-zh">上一篇</span></span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>Interactive Systems</h3>
+  <h3><span class="lang-en">Interactive Systems</span><span class="lang-zh">交互式系统</span></h3>
   </a>
 
     </div>
@@ -249,9 +264,9 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
       
 
   <a href="/2022/05/30/Vehicle_Poses/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;MaggieRuyi&#x2F;MaggieRuyi.github.io&#x2F;src&#x2F;image&#x2F;vis.jpeg" title="Features for Estimating Autonomous Vehicle Poses">
-  <span class="type">Next Post</span>
+  <span class="type"><span class="lang-en">Next Post</span><span class="lang-zh">下一篇</span></span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>Features for Estimating Autonomous Vehicle Poses</h3>
+  <h3><span class="lang-en">Features for Estimating Autonomous Vehicle Poses</span><span class="lang-zh">用于估计自动驾驶车辆位姿的视觉特征</span></h3>
   </a>
 
     </div>
@@ -269,30 +284,30 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
 
   <div class="panels">
     <div class="inner">
-      <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#search-engine-in-a-room-bob"><span class="toc-number">1.</span> <span class="toc-text"> Search Engine In a Room (Bob)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#prolog"><span class="toc-number">1.1.</span> <span class="toc-text"> Prolog</span></a></li></ol></li></ol>
+      <div class="contents panel pjax" data-title="Contents" data-title-zh="文章目录">
+          <div class="lang-en"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#search-engine-in-a-room-bob"><span class="toc-number">1.</span> <span class="toc-text"> Search Engine In a Room (Bob)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#prolog"><span class="toc-number">1.1.</span> <span class="toc-text"> Prolog</span></a></li></ol></li></ol></div><div class="lang-zh"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%BF%E9%97%B4%E9%87%8C%E7%9A%84%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8Ebob"><span class="toc-number">1.</span> <span class="toc-text"> 房间里的搜索引擎（Bob）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#prolog-2"><span class="toc-number">1.1.</span> <span class="toc-text"> Prolog</span></a></li></ol></li></ol></div>
       </div>
-      <div class="related panel pjax" data-title="Related">
+      <div class="related panel pjax" data-title="Related" data-title-zh="系列文章">
       </div>
-      <div class="overview panel" data-title="Overview">
+      <div class="overview panel" data-title="Overview" data-title-zh="站点概览">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <img class="image" itemprop="image" alt="Ruyi Zhang"
       data-src="/images/avatar.jpg">
   <p class="name" itemprop="name">Ruyi Zhang</p>
-  <div class="description" itemprop="description">Hiiiiiii, I am a PhD student at Harbin Institute of Technology (supervised by Prof. Wangmeng Zuo). My research focuses on Multimodal Large Language Models, Semantic Alignment, Open-World Generalization and 3D Scene Generation.</div>
+  <div class="description" itemprop="description"><span class="lang-en">Hiiiiiii, I am a PhD student at Harbin Institute of Technology (supervised by Prof. Wangmeng Zuo). My research focuses on Multimodal Large Language Models, Semantic Alignment, Open-World Generalization and 3D Scene Generation.</span><span class="lang-zh">你好呀！我是哈尔滨工业大学的博士生（导师：左旺孟教授），研究方向为多模态大语言模型、语义对齐、开放场景泛化与 3D 场景生成。</span></div>
 </div>
 
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
         <span class="count">13</span>
-        <span class="name">posts</span>
+        <span class="name"><span class="lang-en">posts</span><span class="lang-zh">文章</span></span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
         <span class="count">3</span>
-        <span class="name">tags</span>
+        <span class="name"><span class="lang-en">tags</span><span class="lang-zh">标签</span></span>
       </a>
     </div>
 </nav>
@@ -306,32 +321,32 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
   
     
   <li class="item">
-    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+    <a href="/" rel="section"><i class="ic i-home"></i><span class="lang-en">Home</span><span class="lang-zh">首页</span></a>
   </li>
 
     
   <li class="item">
-    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
+    <a href="/about/" rel="section"><i class="ic i-user"></i><span class="lang-en">About</span><span class="lang-zh">关于我</span></a>
   </li>
 
     
   <li class="item">
-    <a href="/publications/" rel="section"><i class="ic i-file"></i>Publications</a>
+    <a href="/publications/" rel="section"><i class="ic i-file"></i><span class="lang-en">Publications</span><span class="lang-zh">学术论文</span></a>
   </li>
 
         
   <li class="item dropdown">
-      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+      <a href="javascript:void(0);"><i class="ic i-feather"></i><span class="lang-en">Posts</span><span class="lang-zh">文章</span></a>
     <ul class="submenu">
 
         
   <li class="item">
-    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i><span class="lang-en">Archives</span><span class="lang-zh">归档</span></a>
   </li>
 
         
   <li class="item">
-    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i><span class="lang-en">Tags</span><span class="lang-zh">标签</span></a>
   </li>
 
   </ul>
@@ -365,7 +380,7 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
         <div class="widgets">
           
 <div class="rpost pjax">
-  <h2>Random Posts</h2>
+  <h2><span class="lang-en">Random Posts</span><span class="lang-zh">随机文章</span></h2>
   <ul>
       
   <li class="item">
@@ -373,7 +388,7 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2026/03/15/Count_Curriculum/" title="Count-Curriculum: Number-Free Figure Matching">Count-Curriculum: Number-Free Figure Matching</a></span>
+    <span><a href="/2026/03/05/VVM_Tuning/" title="Generalize LMMs to Versatile Visual Modalities"><span class="lang-en">Generalize LMMs to Versatile Visual Modalities</span><span class="lang-zh">将多模态大模型泛化到多样视觉模态</span></a></span>
   </li>
 
       
@@ -382,7 +397,7 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2022/05/19/Search_engine_in_a_room/" title="Search Engine">Search Engine</a></span>
+    <span><a href="/2026/02/13/Video_Restoration/" title="Task-Uncertainty-Aware Video Restoration"><span class="lang-en">Task-Uncertainty-Aware Video Restoration</span><span class="lang-zh">任务不确定性感知的视频复原</span></a></span>
   </li>
 
       
@@ -391,7 +406,7 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Maze_Solver/" title="Maze Solver">Maze Solver</a></span>
+    <span><a href="/2026/03/19/ControlScene/" title="ControlScene: Controllable Text-to-3D Scene Generation"><span class="lang-en">ControlScene: Controllable Text-to-3D Scene Generation</span><span class="lang-zh">ControlScene：可控的文本到三维场景生成</span></a></span>
   </li>
 
       
@@ -400,7 +415,7 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2026/03/05/VVM_Tuning/" title="Generalize LMMs to Versatile Visual Modalities">Generalize LMMs to Versatile Visual Modalities</a></span>
+    <span><a href="/2023/10/27/Maze_Solver/" title="Maze Solver"><span class="lang-en">Maze Solver</span><span class="lang-zh">迷宫求解器</span></a></span>
   </li>
 
       
@@ -409,7 +424,7 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Chess_video_game/" title="Chess Video Game">Chess Video Game</a></span>
+    <span><a href="/2023/10/27/Snake_Game/" title="Snake Game"><span class="lang-en">Snake Game</span><span class="lang-zh">贪吃蛇游戏</span></a></span>
   </li>
 
       
@@ -418,7 +433,7 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2026/03/19/ControlScene/" title="ControlScene: Controllable Text-to-3D Scene Generation">ControlScene: Controllable Text-to-3D Scene Generation</a></span>
+    <span><a href="/2023/10/27/Hex_Bots/" title="Hex"><span class="lang-en">Hex</span><span class="lang-zh">Hex 六贯棋</span></a></span>
   </li>
 
       
@@ -427,7 +442,7 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2022/04/15/Interactive_Systems/" title="Interactive Systems">Interactive Systems</a></span>
+    <span><a href="/2026/03/15/Count_Curriculum/" title="Count-Curriculum: Number-Free Figure Matching"><span class="lang-en">Count-Curriculum: Number-Free Figure Matching</span><span class="lang-zh">Count-Curriculum：无编号的论文图表匹配</span></a></span>
   </li>
 
       
@@ -436,7 +451,7 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2026/02/13/Video_Restoration/" title="Task-Uncertainty-Aware Video Restoration">Task-Uncertainty-Aware Video Restoration</a></span>
+    <span><a href="/2022/05/19/Search_engine_in_a_room/" title="Search Engine"><span class="lang-en">Search Engine</span><span class="lang-zh">房间里的搜索引擎</span></a></span>
   </li>
 
       
@@ -445,7 +460,7 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Hex_Bots/" title="Hex">Hex</a></span>
+    <span><a href="/2023/10/27/A_Fuzzy_Logic-based_Washing_Machine/" title="A Fuzzy Logic-based Washing Machine"><span class="lang-en">A Fuzzy Logic-based Washing Machine</span><span class="lang-zh">基于模糊逻辑的洗衣机</span></a></span>
   </li>
 
       
@@ -454,13 +469,13 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Snake_Game/" title="Snake Game">Snake Game</a></span>
+    <span><a href="/2023/10/27/Chess_video_game/" title="Chess Video Game"><span class="lang-en">Chess Video Game</span><span class="lang-zh">国际象棋电子游戏</span></a></span>
   </li>
 
   </ul>
 </div>
 <div>
-  <h2>Recent Comments</h2>
+  <h2><span class="lang-en">Recent Comments</span><span class="lang-zh">最新评论</span></h2>
   <ul class="leancloud-recent-comment"></ul>
 </div>
 
@@ -476,7 +491,7 @@ In this example, we have defined facts (mammals are cat and dog) and a rule (has
     <span class="author" itemprop="copyrightHolder">Ruyi Zhang @ Ruyi Zhang</span>
   </div>
   <div class="powered-by">
-    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+    <span class="lang-en">Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></span><span class="lang-zh">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></span>
   </div>
 </div>
 
