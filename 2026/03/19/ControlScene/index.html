@@ -24,15 +24,15 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
-  <meta name="keywords" content="【GAME】" />
+  <meta name="keywords" content="【Research】" />
 
 
-<link rel="canonical" href="http://maggieruyi.github.io/2023/10/27/Snake_Game/">
+<link rel="canonical" href="http://maggieruyi.github.io/2026/03/19/ControlScene/">
 
 
 
   <title>
-Snake Game |
+ControlScene: Controllable Text-to-3D Scene Generation |
 Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</title>
 <meta name="generator" content="Hexo 6.0.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -60,16 +60,16 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">Snake Game
+  <h1 itemprop="name headline">ControlScene: Controllable Text-to-3D Scene Generation
   </h1>
   
 <div class="meta">
-  <span class="item" title="Created: 2023-10-27 09:00:24">
+  <span class="item" title="Created: 2026-03-19 10:00:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
     <span class="text">Posted on</span>
-    <time itemprop="dateCreated datePublished" datetime="2023-10-27T09:00:24+08:00">2023-10-27</time>
+    <time itemprop="dateCreated datePublished" datetime="2026-03-19T10:00:00+08:00">2026-03-19</time>
   </span>
 </div>
 
@@ -101,7 +101,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 
       </div>
       <div id="imgs" class="pjax">
-          <img src="https://raw.githubusercontent.com/MaggieRuyi/MaggieRuyi.github.io/src/image/snake.jpeg">
+          <img src="//images/research/controlscene.png">
       </div>
     </header>
     <div id="waves">
@@ -129,7 +129,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
-  <link itemprop="mainEntityOfPage" href="http://maggieruyi.github.io/2023/10/27/Snake_Game/">
+  <link itemprop="mainEntityOfPage" href="http://maggieruyi.github.io/2026/03/19/ControlScene/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
@@ -144,24 +144,29 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="snake-game"><a class="markdownIt-Anchor" href="#snake-game">#</a> Snake Game</h1>
-<hr>
-<h2 id="rules-of-the-game-to-be-implemented"><a class="markdownIt-Anchor" href="#rules-of-the-game-to-be-implemented">#</a> Rules of the game to be implemented</h2>
-<p>The Snake game is a classic and simple video game in which the player controls a snake that moves around a confined playing area, trying to collect food items while avoiding collisions with the walls of the playing area and the snake’s own tail. Here’s a basic explanation of how the game works:</p>
-<p>1.Objective: The primary objective of the game is to eat as much food as possible to make the snake grow longer. The game continues until the snake collides with the wall or itself.</p>
-<p>2.Game Elements:</p>
-<p>Snake: The player controls a snake, typically represented as a line or a chain of connected segments. The snake starts as a short line and gradually grows longer as it consumes food.<br>
-Food: Food items appear at random positions within the playing area. When the snake “eats” a food item, it gets longer, and a new food item appears elsewhere in the arena.</p>
-<p>3.Controls: The player can control the snake’s direction using arrow keys (or other input methods). The snake can move up, down, left, and right.</p>
-<p>4.Gameplay: As the game begins, the snake starts moving in a specific direction. The player’s task is to change the snake’s direction to guide it toward the food items. When the snake eats food, it grows longer, making it more challenging to avoid collisions.</p>
-<p>5.Game Over: The game ends when one of the following conditions is met:</p>
-<p>The snake collides with the walls of the playing area.<br>
-The snake collides with itself (by running into its own body).</p>
-<p>6.Scoring: The player’s score is usually based on the number of food items the snake eats. The longer the snake gets, the higher the score.<br>
-![]</p>
+    <h1 id="controlscene-controllable-text-to-3d-scene-generation-via-structured-layout-priors"><a class="markdownIt-Anchor" href="#controlscene-controllable-text-to-3d-scene-generation-via-structured-layout-priors">#</a> ControlScene: Controllable Text-to-3D Scene Generation via Structured Layout Priors</h1>
+<p><strong>Ruyi Zhang</strong>, et al. · <span class="label success">CAAI Trans. · Accepted</span> · <span class="label primary">First Author</span></p>
+<h1 id="motivation"><a class="markdownIt-Anchor" href="#motivation">#</a> Motivation</h1>
+<p>Text-to-3D scene generation makes 3D content creation as easy as writing a sentence, with uses in VR, games, interior design and simulation. Existing methods, however, often produce scenes that are not semantically faithful, not spatially coherent and hard to control, mainly because they lack grounded spatial reasoning and fine-grained structural supervision.</p>
+<h1 id="layoutverse-20k"><a class="markdownIt-Anchor" href="#layoutverse-20k">#</a> LayoutVerse-20K</h1>
+<p>We introduce <strong>LayoutVerse-20K</strong>, a large-scale benchmark of <strong>20,000 manually annotated samples</strong>. Each sample includes a text prompt, layout metadata, a graph-structured layout, a scene graph and the corresponding 3D scene (panorama, multi-view images and 3D Gaussian Splatting).</p>
+<p><img data-src="/images/research/controlscene.png" alt="Overview of LayoutVerse-20K"></p>
+<h1 id="method"><a class="markdownIt-Anchor" href="#method">#</a> Method</h1>
+<p><strong>ControlScene</strong> injects layout-level structure into the generation process so that LLMs jointly reason about <strong>semantics</strong> and <strong>spatial composition</strong>.</p>
+<p><img data-src="/images/research/controlscene_framework.png" alt="Overview of the ControlScene framework"></p>
+<ul>
+<li><strong>LLM-driven structured layout generation</strong> from natural language.</li>
+<li>Two task-specific metrics, <strong>category plausibility</strong> and <strong>layout plausibility</strong>, which compare generated outputs against commonsense priors from Top-K reference samples.</li>
+<li>An <strong>interactive UI</strong> for real-time layout customization.</li>
+</ul>
+<h1 id="results"><a class="markdownIt-Anchor" href="#results">#</a> Results</h1>
+<div class="note success">
+<p>ControlScene outperforms baseline methods in spatial realism, semantic consistency and user controllability, providing a solid foundation for grounded, language-driven 3D scene generation.</p>
+</div>
+<p><span class="label">3D Gaussian Splatting</span> <span class="label">LLM</span> <span class="label">Scene Graph</span> <span class="label">Layout</span></p>
 
       <div class="tags">
-          <a href="/tags/%E3%80%90GAME%E3%80%91/" rel="tag"><i class="ic i-tag"></i> 【GAME】</a>
+          <a href="/tags/%E3%80%90Research%E3%80%91/" rel="tag"><i class="ic i-tag"></i> 【Research】</a>
       </div>
   </div>
 
@@ -173,7 +178,7 @@ The snake collides with itself (by running into its own body).</p>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2026-09-30 14:51:08" itemprop="dateModified" datetime="2026-09-30T14:51:08+08:00">2026-09-30</time>
+    <time title="Modified: 2026-09-30 20:15:40" itemprop="dateModified" datetime="2026-09-30T20:15:40+08:00">2026-09-30</time>
   </span>
 </div>
 
@@ -209,7 +214,7 @@ The snake collides with itself (by running into its own body).</p>
   </li>
   <li class="link">
     <strong>Post link: </strong>
-    <a href="http://maggieruyi.github.io/2023/10/27/Snake_Game/" title="Snake Game">http://maggieruyi.github.io/2023/10/27/Snake_Game/</a>
+    <a href="http://maggieruyi.github.io/2026/03/19/ControlScene/" title="ControlScene: Controllable Text-to-3D Scene Generation">http://maggieruyi.github.io/2026/03/19/ControlScene/</a>
   </li>
   <li class="license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
@@ -228,22 +233,14 @@ The snake collides with itself (by running into its own body).</p>
     <div class="item left">
       
 
-  <a href="/2023/10/27/Chess_video_game/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;MaggieRuyi&#x2F;MaggieRuyi.github.io&#x2F;src&#x2F;image&#x2F;Chess.png" title="Chess Video Game">
+  <a href="/2026/03/15/Count_Curriculum/" itemprop="url" rel="prev" data-background-image="&#x2F;&#x2F;images&#x2F;research&#x2F;countcurriculum.png" title="Count-Curriculum: Number-Free Figure Matching">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>Chess Video Game</h3>
+  <h3>Count-Curriculum: Number-Free Figure Matching</h3>
   </a>
 
     </div>
     <div class="item right">
-      
-
-  <a href="/2023/10/27/A_Fuzzy_Logic-based_Washing_Machine/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;MaggieRuyi&#x2F;MaggieRuyi.github.io&#x2F;src&#x2F;image&#x2F;wash.jpeg" title="A Fuzzy Logic-based Washing Machine">
-  <span class="type">Next Post</span>
-  <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>A Fuzzy Logic-based Washing Machine</h3>
-  </a>
-
     </div>
 </div>
 
@@ -260,7 +257,7 @@ The snake collides with itself (by running into its own body).</p>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#snake-game"><span class="toc-number">1.</span> <span class="toc-text"> Snake Game</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#rules-of-the-game-to-be-implemented"><span class="toc-number">1.1.</span> <span class="toc-text"> Rules of the game to be implemented</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#controlscene-controllable-text-to-3d-scene-generation-via-structured-layout-priors"><span class="toc-number">1.</span> <span class="toc-text"> ControlScene: Controllable Text-to-3D Scene Generation via Structured Layout Priors</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#motivation"><span class="toc-number">2.</span> <span class="toc-text"> Motivation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#layoutverse-20k"><span class="toc-number">3.</span> <span class="toc-text"> LayoutVerse-20K</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#method"><span class="toc-number">4.</span> <span class="toc-text"> Method</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#results"><span class="toc-number">5.</span> <span class="toc-text"> Results</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -334,12 +331,10 @@ The snake collides with itself (by running into its own body).</p>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2023/10/27/Chess_video_game/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2023/10/27/A_Fuzzy_Logic-based_Washing_Machine/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -363,7 +358,34 @@ The snake collides with itself (by running into its own body).</p>
 <div class="breadcrumb">
 </div>
 
+    <span><a href="/2022/05/19/Search_engine_in_a_room/" title="Search Engine">Search Engine</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/10/27/Maze_Solver/" title="Maze Solver">Maze Solver</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
     <span><a href="/2026/01/18/Audio_Visual_Event_Localization/" title="Open-Vocabulary Audio-Visual Event Localization">Open-Vocabulary Audio-Visual Event Localization</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2026/03/19/ControlScene/" title="ControlScene: Controllable Text-to-3D Scene Generation">ControlScene: Controllable Text-to-3D Scene Generation</a></span>
   </li>
 
       
@@ -408,43 +430,16 @@ The snake collides with itself (by running into its own body).</p>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Maze_Solver/" title="Maze Solver">Maze Solver</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2022/05/19/Search_engine_in_a_room/" title="Search Engine">Search Engine</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2026/03/15/Count_Curriculum/" title="Count-Curriculum: Number-Free Figure Matching">Count-Curriculum: Number-Free Figure Matching</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/10/27/A_Fuzzy_Logic-based_Washing_Machine/" title="A Fuzzy Logic-based Washing Machine">A Fuzzy Logic-based Washing Machine</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
     <span><a href="/2026/02/13/Video_Restoration/" title="Task-Uncertainty-Aware Video Restoration">Task-Uncertainty-Aware Video Restoration</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/10/27/Hex_Bots/" title="Hex">Hex</a></span>
   </li>
 
   </ul>
@@ -475,7 +470,7 @@ The snake collides with itself (by running into its own body).</p>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2023/10/27/Snake_Game/',
+    path: '2026/03/19/ControlScene/',
     favicon: {
       show: "(๑•ᴗ•๑)♡ hiiiiiiiii",
       hide: "ヾ(≧O≦)〃嗷~"
