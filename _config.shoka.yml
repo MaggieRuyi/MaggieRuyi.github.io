@@ -301,3 +301,9 @@ vendors:
     valine: gh/amehime/MiniValine@4.2.2-beta10/dist/MiniValine.min.js
     copy_tex: npm/katex@0.12.0/dist/contrib/copy-tex.min.js
     chart: npm/frappe-charts@1.5.0/dist/frappe-charts.min.iife.min.js
+
+# Chinese versions of site texts, shown when the language switch is on 中文
+bilingual:
+  title_zh: Maggie 的玫瑰园
+  subtitle_zh: 在我荒芜的土地上，你是最后的玫瑰。
+  description_zh: 你好呀！我是哈尔滨工业大学的博士生（导师：左旺孟教授），研究方向为多模态大语言模型、语义对齐、开放场景泛化与 3D 场景生成。

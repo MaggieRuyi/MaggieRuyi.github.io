@@ -46,8 +46,14 @@ const sideBarTab = function () {
 
     var tab = document.createElement('li')
     var span = document.createElement('span')
-    var text = document.createTextNode(element.attr('data-title'));
-    span.appendChild(text);
+    var titleZh = element.attr('data-title-zh');
+    if (titleZh) {
+      span.innerHTML = '<span class="lang-en"></span><span class="lang-zh"></span>';
+      span.firstChild.textContent = element.attr('data-title');
+      span.lastChild.textContent = titleZh;
+    } else {
+      span.appendChild(document.createTextNode(element.attr('data-title')));
+    }
     tab.appendChild(span);
     tab.addClass(item + ' item');
 

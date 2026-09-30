@@ -133,7 +133,7 @@ hexo.extend.helper.register('_category_posts', function(page) {
         if(post.path == page.path) {
           current = ' class="active"';
         }
-        result += `<li${current}><a href="${hexo.url_for(post.path)}" rel="bookmark" title="${post.title}">${post.title}</a></li>`;
+        result += `<li${current}><a href="${hexo.url_for(post.path)}" rel="bookmark" title="${post.title}">${post.title_zh ? `<span class="lang-en">${post.title}</span><span class="lang-zh">${post.title_zh}</span>` : post.title}</a></li>`;
       })
     }
   })

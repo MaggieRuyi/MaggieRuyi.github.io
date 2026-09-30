@@ -8,19 +8,19 @@
 
   <div class="panels">
     <div class="inner">
-      <div class="contents panel pjax" data-title="{{ __('sidebar.toc') }}">
+      <div class="contents panel pjax" data-title="{{ _t_en('sidebar.toc') }}" data-title-zh="{{ _t_zh('sidebar.toc') }}">
         {%- if display_toc %}
-          {{ toc }}
+          {{ _bi_toc(page.content) }}
         {%- endif %}
       </div>
-      <div class="related panel pjax" data-title="{{ __('sidebar.related') }}">
+      <div class="related panel pjax" data-title="{{ _t_en('sidebar.related') }}" data-title-zh="{{ _t_zh('sidebar.related') }}">
         {%- if related %}
         <ul>
           {{ related }}
         </ul>
         {%- endif %}
       </div>
-      <div class="overview panel" data-title="{{ __('sidebar.overview') }}">
+      <div class="overview panel" data-title="{{ _t_en('sidebar.overview') }}" data-title-zh="{{ _t_zh('sidebar.overview') }}">
         {{ partial('_partials/sidebar/overview.njk', {}, {cache: true}) }}
       </div>
     </div>

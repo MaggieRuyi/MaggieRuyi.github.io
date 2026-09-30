@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.language if page.language else config.language }}">
 <head>
+  <script>(function(){var l=localStorage.getItem('lang');if(l!=='zh'&&l!=='en'){l=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en'}document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l==='zh'?'zh-CN':'en')})()</script>
   {{ partial('_partials/head/head.njk', {}, {cache: true}) }}
   {{ partial('_partials/head/head_unique.njk') }}
   <title>{% block title %}{% endblock %}{{ alternate + " = " if alternate }}{{ title }}{{ " = "+subtitle if subtitle }}</title>
@@ -36,10 +37,10 @@
           {% block header %}
             <a href="{{ config.root }}" class="logo" rel="start">
               {%- if alternate %}<p class="artboard">{{ alternate }}</p>{%- endif %}
-              <h1 itemprop="name headline" class="title">{{ title }}</h1>
+              <h1 itemprop="name headline" class="title">{{ _bi(title, theme.bilingual.title_zh) }}</h1>
             </a>
             {%- if subtitle %}
-            <p class="meta" itemprop="description">= {{ subtitle }} =</p>
+            <p class="meta" itemprop="description">= {{ _bi(subtitle, theme.bilingual.subtitle_zh) }} =</p>
             {%- endif %}
           {% endblock %}
           </div>

@@ -24,7 +24,7 @@
       {%- set postText = page.title or page.link %}
       {{ _url(page.link, postText + postTitleIcon, {class: 'link external', itemprop: 'url'}) }}
     {%- else %}
-      {{- page.title }}
+      {{- _title(page) }}
     {%- endif %}
   </h1>
   {{postmeta.render(page, true)}}

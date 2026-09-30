@@ -1,7 +1,7 @@
 {%- if page.reward !== false %}
 <div class="reward">
-  <button><i class="ic i-heartbeat"></i> {{ __('reward.donate') }}</button>
-  <p>{{ __('reward.text') }}</p>
+  <button><i class="ic i-heartbeat"></i> {{ _t('reward.donate') }}</button>
+  <p>{{ _t('reward.text') }}</p>
   <div id="qr">
     {%- for name, image in theme.reward.account %}
       {%- set builtin = ['wechatpay', 'alipay', 'paypal', 'bitcoin'] %}

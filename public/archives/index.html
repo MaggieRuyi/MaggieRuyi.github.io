@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var l=localStorage.getItem('lang');if(l!=='zh'&&l!=='en'){l=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en'}document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l==='zh'?'zh-CN':'en')})()</script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#FFF">
@@ -76,6 +77,9 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
       <li class="item title"><a href="/" rel="start">Ruyi Zhang</a></li>
     </ul>
     <ul class="right">
+      <li class="item lang" title="English / 中文" role="button" tabindex="0" aria-label="Switch language / 切换语言">
+        <span class="lang-en">中</span><span class="lang-zh">EN</span>
+      </li>
       <li class="item theme">
         <i class="ic i-sun"></i>
       </li>
@@ -89,12 +93,12 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipew28b65j20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeu1usa7j20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicli9lfebj20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeu1usa7j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclfw2t96j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
         </ul>
       </div>
     </header>
@@ -189,29 +193,29 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 
   <div class="panels">
     <div class="inner">
-      <div class="contents panel pjax" data-title="Contents">
+      <div class="contents panel pjax" data-title="Contents" data-title-zh="文章目录">
       </div>
-      <div class="related panel pjax" data-title="Related">
+      <div class="related panel pjax" data-title="Related" data-title-zh="系列文章">
       </div>
-      <div class="overview panel" data-title="Overview">
+      <div class="overview panel" data-title="Overview" data-title-zh="站点概览">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <img class="image" itemprop="image" alt="Ruyi Zhang"
       data-src="/images/avatar.jpg">
   <p class="name" itemprop="name">Ruyi Zhang</p>
-  <div class="description" itemprop="description">Hiiiiiii, I am a PhD student at Harbin Institute of Technology (supervised by Prof. Wangmeng Zuo). My research focuses on Multimodal Large Language Models, Semantic Alignment, Open-World Generalization and 3D Scene Generation.</div>
+  <div class="description" itemprop="description"><span class="lang-en">Hiiiiiii, I am a PhD student at Harbin Institute of Technology (supervised by Prof. Wangmeng Zuo). My research focuses on Multimodal Large Language Models, Semantic Alignment, Open-World Generalization and 3D Scene Generation.</span><span class="lang-zh">你好呀！我是哈尔滨工业大学的博士生（导师：左旺孟教授），研究方向为多模态大语言模型、语义对齐、开放场景泛化与 3D 场景生成。</span></div>
 </div>
 
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
         <span class="count">13</span>
-        <span class="name">posts</span>
+        <span class="name"><span class="lang-en">posts</span><span class="lang-zh">文章</span></span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
         <span class="count">3</span>
-        <span class="name">tags</span>
+        <span class="name"><span class="lang-en">tags</span><span class="lang-zh">标签</span></span>
       </a>
     </div>
 </nav>
@@ -225,32 +229,32 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
   
     
   <li class="item">
-    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+    <a href="/" rel="section"><i class="ic i-home"></i><span class="lang-en">Home</span><span class="lang-zh">首页</span></a>
   </li>
 
     
   <li class="item">
-    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
+    <a href="/about/" rel="section"><i class="ic i-user"></i><span class="lang-en">About</span><span class="lang-zh">关于我</span></a>
   </li>
 
     
   <li class="item">
-    <a href="/publications/" rel="section"><i class="ic i-file"></i>Publications</a>
+    <a href="/publications/" rel="section"><i class="ic i-file"></i><span class="lang-en">Publications</span><span class="lang-zh">学术论文</span></a>
   </li>
 
         
   <li class="item dropdown">
-      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+      <a href="javascript:void(0);"><i class="ic i-feather"></i><span class="lang-en">Posts</span><span class="lang-zh">文章</span></a>
     <ul class="submenu">
 
         
   <li class="item">
-    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i><span class="lang-en">Archives</span><span class="lang-zh">归档</span></a>
   </li>
 
         
   <li class="item">
-    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i><span class="lang-en">Tags</span><span class="lang-zh">标签</span></a>
   </li>
 
   </ul>
@@ -281,7 +285,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
         <div class="widgets">
           
 <div class="rpost pjax">
-  <h2>Random Posts</h2>
+  <h2><span class="lang-en">Random Posts</span><span class="lang-zh">随机文章</span></h2>
   <ul>
       
   <li class="item">
@@ -289,7 +293,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Maze_Solver/" title="Maze Solver">Maze Solver</a></span>
+    <span><a href="/2022/05/19/Search_engine_in_a_room/" title="Search Engine"><span class="lang-en">Search Engine</span><span class="lang-zh">房间里的搜索引擎</span></a></span>
   </li>
 
       
@@ -298,7 +302,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Chess_video_game/" title="Chess Video Game">Chess Video Game</a></span>
+    <span><a href="/2026/01/18/Audio_Visual_Event_Localization/" title="Open-Vocabulary Audio-Visual Event Localization"><span class="lang-en">Open-Vocabulary Audio-Visual Event Localization</span><span class="lang-zh">开放词汇音视频事件定位</span></a></span>
   </li>
 
       
@@ -307,7 +311,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Snake_Game/" title="Snake Game">Snake Game</a></span>
+    <span><a href="/2022/05/30/Vehicle_Poses/" title="Features for Estimating Autonomous Vehicle Poses"><span class="lang-en">Features for Estimating Autonomous Vehicle Poses</span><span class="lang-zh">用于估计自动驾驶车辆位姿的视觉特征</span></a></span>
   </li>
 
       
@@ -316,7 +320,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2026/02/13/Video_Restoration/" title="Task-Uncertainty-Aware Video Restoration">Task-Uncertainty-Aware Video Restoration</a></span>
+    <span><a href="/2023/10/27/Hex_Bots/" title="Hex"><span class="lang-en">Hex</span><span class="lang-zh">Hex 六贯棋</span></a></span>
   </li>
 
       
@@ -325,7 +329,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2022/04/15/Interactive_Systems/" title="Interactive Systems">Interactive Systems</a></span>
+    <span><a href="/2023/10/27/Snake_Game/" title="Snake Game"><span class="lang-en">Snake Game</span><span class="lang-zh">贪吃蛇游戏</span></a></span>
   </li>
 
       
@@ -334,7 +338,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2022/05/19/Search_engine_in_a_room/" title="Search Engine">Search Engine</a></span>
+    <span><a href="/2023/10/27/Chess_video_game/" title="Chess Video Game"><span class="lang-en">Chess Video Game</span><span class="lang-zh">国际象棋电子游戏</span></a></span>
   </li>
 
       
@@ -343,7 +347,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2026/03/19/ControlScene/" title="ControlScene: Controllable Text-to-3D Scene Generation">ControlScene: Controllable Text-to-3D Scene Generation</a></span>
+    <span><a href="/2023/10/27/A_Fuzzy_Logic-based_Washing_Machine/" title="A Fuzzy Logic-based Washing Machine"><span class="lang-en">A Fuzzy Logic-based Washing Machine</span><span class="lang-zh">基于模糊逻辑的洗衣机</span></a></span>
   </li>
 
       
@@ -352,7 +356,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2026/03/15/Count_Curriculum/" title="Count-Curriculum: Number-Free Figure Matching">Count-Curriculum: Number-Free Figure Matching</a></span>
+    <span><a href="/2026/02/13/Video_Restoration/" title="Task-Uncertainty-Aware Video Restoration"><span class="lang-en">Task-Uncertainty-Aware Video Restoration</span><span class="lang-zh">任务不确定性感知的视频复原</span></a></span>
   </li>
 
       
@@ -361,7 +365,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Hex_Bots/" title="Hex">Hex</a></span>
+    <span><a href="/2023/10/27/Maze_Solver/" title="Maze Solver"><span class="lang-en">Maze Solver</span><span class="lang-zh">迷宫求解器</span></a></span>
   </li>
 
       
@@ -370,13 +374,13 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2022/05/30/Vehicle_Poses/" title="Features for Estimating Autonomous Vehicle Poses">Features for Estimating Autonomous Vehicle Poses</a></span>
+    <span><a href="/2026/03/15/Count_Curriculum/" title="Count-Curriculum: Number-Free Figure Matching"><span class="lang-en">Count-Curriculum: Number-Free Figure Matching</span><span class="lang-zh">Count-Curriculum：无编号的论文图表匹配</span></a></span>
   </li>
 
   </ul>
 </div>
 <div>
-  <h2>Recent Comments</h2>
+  <h2><span class="lang-en">Recent Comments</span><span class="lang-zh">最新评论</span></h2>
   <ul class="leancloud-recent-comment"></ul>
 </div>
 
@@ -392,7 +396,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
     <span class="author" itemprop="copyrightHolder">Ruyi Zhang @ Ruyi Zhang</span>
   </div>
   <div class="powered-by">
-    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+    <span class="lang-en">Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></span><span class="lang-zh">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></span>
   </div>
 </div>
 

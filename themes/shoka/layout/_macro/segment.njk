@@ -9,10 +9,10 @@
   </div>
   <div class="info">
     {{postmeta.render(item)}}
-    <h3>{{ _url(item.link or item.path, postText + (postTitleIcon or ''), {itemprop: 'url', title: postText}) }}</h3>
+    <h3>{{ _url(item.link or item.path, _title(item, postText) + (postTitleIcon or ''), {itemprop: 'url', title: postText}) }}</h3>
     <div class="excerpt">
       {%- if item.description %}
-        {{ item.description }}
+        {{ _desc(item) }}
       {% elif item.excerpt %}
         {{ item.excerpt }}
       {% else %}
@@ -27,7 +27,7 @@
       </span>
     </div>
     {%- endif %}
-    {{ _url(item.link or item.path, 'more...', {itemprop: 'url', title: postText, class: 'btn'}) }}
+    {{ _url(item.link or item.path, _bi('more...', '阅读全文'), {itemprop: 'url', title: postText, class: 'btn'}) }}
   </div>
 </article>
 {% endmacro %}

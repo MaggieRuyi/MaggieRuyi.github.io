@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var l=localStorage.getItem('lang');if(l!=='zh'&&l!=='en'){l=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en'}document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l==='zh'?'zh-CN':'en')})()</script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#FFF">
@@ -60,7 +61,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">Generalize LMMs to Versatile Visual Modalities
+  <h1 itemprop="name headline"><span class="lang-en">Generalize LMMs to Versatile Visual Modalities</span><span class="lang-zh">将多模态大模型泛化到多样视觉模态</span>
   </h1>
   
 <div class="meta">
@@ -68,7 +69,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <span class="text">Posted on</span>
+    <span class="text"><span class="lang-en">Posted on</span><span class="lang-zh">发表于</span></span>
     <time itemprop="dateCreated datePublished" datetime="2026-03-05T10:00:00+08:00">2026-03-05</time>
   </span>
 </div>
@@ -89,6 +90,9 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
       <li class="item title"><a href="/" rel="start">Ruyi Zhang</a></li>
     </ul>
     <ul class="right">
+      <li class="item lang" title="English / 中文" role="button" tabindex="0" aria-label="Switch language / 切换语言">
+        <span class="lang-en">中</span><span class="lang-zh">EN</span>
+      </li>
       <li class="item theme">
         <i class="ic i-sun"></i>
       </li>
@@ -125,7 +129,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
     
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
-<span><a href="/">Home</a></span>
+<span><a href="/"><span class="lang-en">Home</span><span class="lang-zh">首页</span></a></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
@@ -144,7 +148,8 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="generalize-lmms-to-versatile-visual-modalities-via-fabricated-modality-synthesis"><a class="markdownIt-Anchor" href="#generalize-lmms-to-versatile-visual-modalities-via-fabricated-modality-synthesis">#</a> Generalize LMMs to Versatile Visual Modalities via Fabricated Modality Synthesis</h1>
+    <div class="lang-en">
+<h1 id="generalize-lmms-to-versatile-visual-modalities-via-fabricated-modality-synthesis"><a class="markdownIt-Anchor" href="#generalize-lmms-to-versatile-visual-modalities-via-fabricated-modality-synthesis">#</a> Generalize LMMs to Versatile Visual Modalities via Fabricated Modality Synthesis</h1>
 <p>S. Yuan, Y. Li, <strong>Ruyi Zhang</strong>, et al. · <span class="label success">ECCV 2026 · Accepted</span></p>
 <h1 id="idea"><a class="markdownIt-Anchor" href="#idea">#</a> Idea</h1>
 <p>Large Multimodal Models (LMMs) are strong on RGB images, but their ability to generalize to <strong>unseen visual modalities</strong> (thermal, depth, X-ray and more) is largely unexplored. We argue that different visual modalities are just different samplings of the same physical world. Good generalization therefore needs both <strong>modality-agnostic perception</strong> of scene semantics and <strong>adaptability</strong> to modality-specific appearance.</p>
@@ -162,6 +167,27 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 </div>
 <h1 id="my-contribution"><a class="markdownIt-Anchor" href="#my-contribution">#</a> My Contribution</h1>
 <p>Design of the modality synthesis pipeline and zero-shot generalization experiments.</p>
+</div>
+<div class="lang-zh">
+<h1 id="generalize-lmms-to-versatile-visual-modalities-via-fabricated-modality-synthesis-2"><a class="markdownIt-Anchor" href="#generalize-lmms-to-versatile-visual-modalities-via-fabricated-modality-synthesis-2">#</a> Generalize LMMs to Versatile Visual Modalities via Fabricated Modality Synthesis</h1>
+<p>S. Yuan, Y. Li, <strong>Ruyi Zhang</strong>, et al. · <span class="label success">ECCV 2026・已接收</span></p>
+<h1 id="核心思想"><a class="markdownIt-Anchor" href="#核心思想">#</a> 核心思想</h1>
+<p>多模态大模型（LMM）在 RGB 图像上表现出色，但其向<strong>未见视觉模态</strong>（热红外、深度、X 光等）泛化的能力仍鲜有研究。我们认为，不同的视觉模态本质上是对同一物理世界的不同采样。因此，良好的泛化既需要对场景语义的<strong>模态无关感知</strong>，也需要对模态特有外观的<strong>适应能力</strong>。</p>
+<p><img data-src="/images/research/vvm.png" alt="核心思想概览"></p>
+<h1 id="方法vvm-tuning"><a class="markdownIt-Anchor" href="#方法vvm-tuning">#</a> 方法：VVM-Tuning</h1>
+<ul>
+<li><strong>模态合成</strong>：从 RGB 场景合成外观多样的图像，使模型学会将不变的语义与变化的外观解耦。</li>
+<li><strong>模态上下文</strong>：在提示中加入模态描述，并通过指令微调将外观变化映射回模态属性，从而在推理时实现<strong>零样本</strong>适应。</li>
+<li><strong>VVM-Bench</strong>：包含 6 种真实与合成模态的基准，用于评测语义感知与模态理解能力。</li>
+</ul>
+<p><img data-src="/images/research/vvm_pipeline.png" alt="模态合成流程"></p>
+<h1 id="实验结果"><a class="markdownIt-Anchor" href="#实验结果">#</a> 实验结果</h1>
+<div class="note success">
+<p>仅在合成模态上训练，<strong>5 个受测 LMM</strong>（LLaVA-1.5、Qwen-2.5-VL、Qwen-3-VL 等）在真实模态和新的合成模态上均取得一致提升，且无需任何目标模态内的训练。</p>
+</div>
+<h1 id="我的贡献"><a class="markdownIt-Anchor" href="#我的贡献">#</a> 我的贡献</h1>
+<p>负责模态合成流程的设计以及零样本泛化实验。</p>
+</div>
 
       <div class="tags">
           <a href="/tags/%E3%80%90Research%E3%80%91/" rel="tag"><i class="ic i-tag"></i> 【Research】</a>
@@ -176,14 +202,14 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2026-09-30 20:15:40" itemprop="dateModified" datetime="2026-09-30T20:15:40+08:00">2026-09-30</time>
+    <time title="Modified: 2026-09-30 20:54:56" itemprop="dateModified" datetime="2026-09-30T20:54:56+08:00">2026-09-30</time>
   </span>
 </div>
 
       
 <div class="reward">
-  <button><i class="ic i-heartbeat"></i> Donate</button>
-  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <button><i class="ic i-heartbeat"></i> <span class="lang-en">Donate</span><span class="lang-zh">赞赏</span></button>
+  <p><span class="lang-en">Give me a cup of [coffee]~(￣▽￣)~*</span><span class="lang-zh">请我喝[茶]~(￣▽￣)~*</span></p>
   <div id="qr">
       
       <div>
@@ -208,14 +234,14 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div id="copyright">
 <ul>
   <li class="author">
-    <strong>Post author:  </strong>Ruyi Zhang <i class="ic i-at"><em>@</em></i>Maggie's Rose Garden
+    <strong><span class="lang-en">Post author</span><span class="lang-zh">本文作者</span>:  </strong>Ruyi Zhang <i class="ic i-at"><em>@</em></i>Maggie's Rose Garden
   </li>
   <li class="link">
-    <strong>Post link: </strong>
+    <strong><span class="lang-en">Post link</span><span class="lang-zh">本文链接</span>: </strong>
     <a href="http://maggieruyi.github.io/2026/03/05/VVM_Tuning/" title="Generalize LMMs to Versatile Visual Modalities">http://maggieruyi.github.io/2026/03/05/VVM_Tuning/</a>
   </li>
   <li class="license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+    <strong><span class="lang-en">Copyright Notice</span><span class="lang-zh">版权声明</span>:  </strong><span class="lang-en">All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.</span><span class="lang-zh">本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</span>
   </li>
 </ul>
 </div>
@@ -232,9 +258,9 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
       
 
   <a href="/2026/02/13/Video_Restoration/" itemprop="url" rel="prev" data-background-image="&#x2F;&#x2F;images&#x2F;research&#x2F;restoration.png" title="Task-Uncertainty-Aware Video Restoration">
-  <span class="type">Previous Post</span>
+  <span class="type"><span class="lang-en">Previous Post</span><span class="lang-zh">上一篇</span></span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>Task-Uncertainty-Aware Video Restoration</h3>
+  <h3><span class="lang-en">Task-Uncertainty-Aware Video Restoration</span><span class="lang-zh">任务不确定性感知的视频复原</span></h3>
   </a>
 
     </div>
@@ -242,9 +268,9 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
       
 
   <a href="/2026/03/15/Count_Curriculum/" itemprop="url" rel="next" data-background-image="&#x2F;&#x2F;images&#x2F;research&#x2F;countcurriculum.png" title="Count-Curriculum: Number-Free Figure Matching">
-  <span class="type">Next Post</span>
+  <span class="type"><span class="lang-en">Next Post</span><span class="lang-zh">下一篇</span></span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>Count-Curriculum: Number-Free Figure Matching</h3>
+  <h3><span class="lang-en">Count-Curriculum: Number-Free Figure Matching</span><span class="lang-zh">Count-Curriculum：无编号的论文图表匹配</span></h3>
   </a>
 
     </div>
@@ -262,30 +288,30 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 
   <div class="panels">
     <div class="inner">
-      <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#generalize-lmms-to-versatile-visual-modalities-via-fabricated-modality-synthesis"><span class="toc-number">1.</span> <span class="toc-text"> Generalize LMMs to Versatile Visual Modalities via Fabricated Modality Synthesis</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#idea"><span class="toc-number">2.</span> <span class="toc-text"> Idea</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#method-vvm-tuning"><span class="toc-number">3.</span> <span class="toc-text"> Method: VVM-Tuning</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#results"><span class="toc-number">4.</span> <span class="toc-text"> Results</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#my-contribution"><span class="toc-number">5.</span> <span class="toc-text"> My Contribution</span></a></li></ol>
+      <div class="contents panel pjax" data-title="Contents" data-title-zh="文章目录">
+          <div class="lang-en"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#generalize-lmms-to-versatile-visual-modalities-via-fabricated-modality-synthesis"><span class="toc-number">1.</span> <span class="toc-text"> Generalize LMMs to Versatile Visual Modalities via Fabricated Modality Synthesis</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#idea"><span class="toc-number">2.</span> <span class="toc-text"> Idea</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#method-vvm-tuning"><span class="toc-number">3.</span> <span class="toc-text"> Method: VVM-Tuning</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#results"><span class="toc-number">4.</span> <span class="toc-text"> Results</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#my-contribution"><span class="toc-number">5.</span> <span class="toc-text"> My Contribution</span></a></li></ol></div><div class="lang-zh"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#generalize-lmms-to-versatile-visual-modalities-via-fabricated-modality-synthesis-2"><span class="toc-number">1.</span> <span class="toc-text"> Generalize LMMs to Versatile Visual Modalities via Fabricated Modality Synthesis</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="toc-number">2.</span> <span class="toc-text"> 核心思想</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%B9%E6%B3%95vvm-tuning"><span class="toc-number">3.</span> <span class="toc-text"> 方法：VVM-Tuning</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">4.</span> <span class="toc-text"> 实验结果</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E8%B4%A1%E7%8C%AE"><span class="toc-number">5.</span> <span class="toc-text"> 我的贡献</span></a></li></ol></div>
       </div>
-      <div class="related panel pjax" data-title="Related">
+      <div class="related panel pjax" data-title="Related" data-title-zh="系列文章">
       </div>
-      <div class="overview panel" data-title="Overview">
+      <div class="overview panel" data-title="Overview" data-title-zh="站点概览">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <img class="image" itemprop="image" alt="Ruyi Zhang"
       data-src="/images/avatar.jpg">
   <p class="name" itemprop="name">Ruyi Zhang</p>
-  <div class="description" itemprop="description">Hiiiiiii, I am a PhD student at Harbin Institute of Technology (supervised by Prof. Wangmeng Zuo). My research focuses on Multimodal Large Language Models, Semantic Alignment, Open-World Generalization and 3D Scene Generation.</div>
+  <div class="description" itemprop="description"><span class="lang-en">Hiiiiiii, I am a PhD student at Harbin Institute of Technology (supervised by Prof. Wangmeng Zuo). My research focuses on Multimodal Large Language Models, Semantic Alignment, Open-World Generalization and 3D Scene Generation.</span><span class="lang-zh">你好呀！我是哈尔滨工业大学的博士生（导师：左旺孟教授），研究方向为多模态大语言模型、语义对齐、开放场景泛化与 3D 场景生成。</span></div>
 </div>
 
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
         <span class="count">13</span>
-        <span class="name">posts</span>
+        <span class="name"><span class="lang-en">posts</span><span class="lang-zh">文章</span></span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
         <span class="count">3</span>
-        <span class="name">tags</span>
+        <span class="name"><span class="lang-en">tags</span><span class="lang-zh">标签</span></span>
       </a>
     </div>
 </nav>
@@ -299,32 +325,32 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
   
     
   <li class="item">
-    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+    <a href="/" rel="section"><i class="ic i-home"></i><span class="lang-en">Home</span><span class="lang-zh">首页</span></a>
   </li>
 
     
   <li class="item">
-    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
+    <a href="/about/" rel="section"><i class="ic i-user"></i><span class="lang-en">About</span><span class="lang-zh">关于我</span></a>
   </li>
 
     
   <li class="item">
-    <a href="/publications/" rel="section"><i class="ic i-file"></i>Publications</a>
+    <a href="/publications/" rel="section"><i class="ic i-file"></i><span class="lang-en">Publications</span><span class="lang-zh">学术论文</span></a>
   </li>
 
         
   <li class="item dropdown">
-      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+      <a href="javascript:void(0);"><i class="ic i-feather"></i><span class="lang-en">Posts</span><span class="lang-zh">文章</span></a>
     <ul class="submenu">
 
         
   <li class="item">
-    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i><span class="lang-en">Archives</span><span class="lang-zh">归档</span></a>
   </li>
 
         
   <li class="item">
-    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i><span class="lang-en">Tags</span><span class="lang-zh">标签</span></a>
   </li>
 
   </ul>
@@ -358,7 +384,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
         <div class="widgets">
           
 <div class="rpost pjax">
-  <h2>Random Posts</h2>
+  <h2><span class="lang-en">Random Posts</span><span class="lang-zh">随机文章</span></h2>
   <ul>
       
   <li class="item">
@@ -366,7 +392,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2022/05/19/Search_engine_in_a_room/" title="Search Engine">Search Engine</a></span>
+    <span><a href="/2022/05/30/Vehicle_Poses/" title="Features for Estimating Autonomous Vehicle Poses"><span class="lang-en">Features for Estimating Autonomous Vehicle Poses</span><span class="lang-zh">用于估计自动驾驶车辆位姿的视觉特征</span></a></span>
   </li>
 
       
@@ -375,7 +401,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Chess_video_game/" title="Chess Video Game">Chess Video Game</a></span>
+    <span><a href="/2026/03/19/ControlScene/" title="ControlScene: Controllable Text-to-3D Scene Generation"><span class="lang-en">ControlScene: Controllable Text-to-3D Scene Generation</span><span class="lang-zh">ControlScene：可控的文本到三维场景生成</span></a></span>
   </li>
 
       
@@ -384,7 +410,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2026/03/19/ControlScene/" title="ControlScene: Controllable Text-to-3D Scene Generation">ControlScene: Controllable Text-to-3D Scene Generation</a></span>
+    <span><a href="/2023/10/27/Maze_Solver/" title="Maze Solver"><span class="lang-en">Maze Solver</span><span class="lang-zh">迷宫求解器</span></a></span>
   </li>
 
       
@@ -393,7 +419,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2022/05/30/Vehicle_Poses/" title="Features for Estimating Autonomous Vehicle Poses">Features for Estimating Autonomous Vehicle Poses</a></span>
+    <span><a href="/2026/03/05/VVM_Tuning/" title="Generalize LMMs to Versatile Visual Modalities"><span class="lang-en">Generalize LMMs to Versatile Visual Modalities</span><span class="lang-zh">将多模态大模型泛化到多样视觉模态</span></a></span>
   </li>
 
       
@@ -402,7 +428,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2026/03/05/VVM_Tuning/" title="Generalize LMMs to Versatile Visual Modalities">Generalize LMMs to Versatile Visual Modalities</a></span>
+    <span><a href="/2023/10/27/A_Fuzzy_Logic-based_Washing_Machine/" title="A Fuzzy Logic-based Washing Machine"><span class="lang-en">A Fuzzy Logic-based Washing Machine</span><span class="lang-zh">基于模糊逻辑的洗衣机</span></a></span>
   </li>
 
       
@@ -411,7 +437,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Maze_Solver/" title="Maze Solver">Maze Solver</a></span>
+    <span><a href="/2022/05/19/Search_engine_in_a_room/" title="Search Engine"><span class="lang-en">Search Engine</span><span class="lang-zh">房间里的搜索引擎</span></a></span>
   </li>
 
       
@@ -420,7 +446,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Snake_Game/" title="Snake Game">Snake Game</a></span>
+    <span><a href="/2023/10/27/Hex_Bots/" title="Hex"><span class="lang-en">Hex</span><span class="lang-zh">Hex 六贯棋</span></a></span>
   </li>
 
       
@@ -429,7 +455,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2022/04/15/Interactive_Systems/" title="Interactive Systems">Interactive Systems</a></span>
+    <span><a href="/2023/10/27/Snake_Game/" title="Snake Game"><span class="lang-en">Snake Game</span><span class="lang-zh">贪吃蛇游戏</span></a></span>
   </li>
 
       
@@ -438,7 +464,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/A_Fuzzy_Logic-based_Washing_Machine/" title="A Fuzzy Logic-based Washing Machine">A Fuzzy Logic-based Washing Machine</a></span>
+    <span><a href="/2023/10/27/Chess_video_game/" title="Chess Video Game"><span class="lang-en">Chess Video Game</span><span class="lang-zh">国际象棋电子游戏</span></a></span>
   </li>
 
       
@@ -447,13 +473,13 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2026/01/18/Audio_Visual_Event_Localization/" title="Open-Vocabulary Audio-Visual Event Localization">Open-Vocabulary Audio-Visual Event Localization</a></span>
+    <span><a href="/2026/02/13/Video_Restoration/" title="Task-Uncertainty-Aware Video Restoration"><span class="lang-en">Task-Uncertainty-Aware Video Restoration</span><span class="lang-zh">任务不确定性感知的视频复原</span></a></span>
   </li>
 
   </ul>
 </div>
 <div>
-  <h2>Recent Comments</h2>
+  <h2><span class="lang-en">Recent Comments</span><span class="lang-zh">最新评论</span></h2>
   <ul class="leancloud-recent-comment"></ul>
 </div>
 
@@ -469,7 +495,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
     <span class="author" itemprop="copyrightHolder">Ruyi Zhang @ Ruyi Zhang</span>
   </div>
   <div class="powered-by">
-    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+    <span class="lang-en">Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></span><span class="lang-zh">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></span>
   </div>
 </div>
 

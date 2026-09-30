@@ -1235,6 +1235,31 @@ const themeColorListener = function () {
   });
 }
 
+const changeLang = function(lang) {
+  HTML.attr('data-lang', lang);
+  HTML.attr('lang', lang == 'zh' ? 'zh-CN' : 'en');
+}
+
+const langListener = function () {
+  var btn = $('#nav .lang');
+  if(!btn)
+    return;
+
+  var toggle = function() {
+    var lang = HTML.attr('data-lang') == 'zh' ? 'en' : 'zh';
+    changeLang(lang);
+    store.set('lang', lang);
+  }
+
+  btn.addEventListener('click', toggle);
+  btn.addEventListener('keydown', function(event) {
+    if(event.key == 'Enter' || event.key == ' ') {
+      event.preventDefault();
+      toggle();
+    }
+  });
+}
+
 const visibilityListener = function () {
   document.addEventListener('visibilitychange', function() {
     switch(document.visibilityState) {
@@ -1443,8 +1468,14 @@ const sideBarTab = function () {
 
     var tab = document.createElement('li')
     var span = document.createElement('span')
-    var text = document.createTextNode(element.attr('data-title'));
-    span.appendChild(text);
+    var titleZh = element.attr('data-title-zh');
+    if (titleZh) {
+      span.innerHTML = '<span class="lang-en"></span><span class="lang-zh"></span>';
+      span.firstChild.textContent = element.attr('data-title');
+      span.lastChild.textContent = titleZh;
+    } else {
+      span.appendChild(document.createTextNode(element.attr('data-title')));
+    }
     tab.appendChild(span);
     tab.addClass(item + ' item');
 
@@ -2312,6 +2343,7 @@ const siteInit = function () {
 
   visibilityListener()
   themeColorListener()
+  langListener()
 
   algoliaSearch(pjax)
 

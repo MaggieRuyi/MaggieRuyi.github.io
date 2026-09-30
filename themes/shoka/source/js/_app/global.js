@@ -127,6 +127,31 @@ const themeColorListener = function () {
   });
 }
 
+const changeLang = function(lang) {
+  HTML.attr('data-lang', lang);
+  HTML.attr('lang', lang == 'zh' ? 'zh-CN' : 'en');
+}
+
+const langListener = function () {
+  var btn = $('#nav .lang');
+  if(!btn)
+    return;
+
+  var toggle = function() {
+    var lang = HTML.attr('data-lang') == 'zh' ? 'en' : 'zh';
+    changeLang(lang);
+    store.set('lang', lang);
+  }
+
+  btn.addEventListener('click', toggle);
+  btn.addEventListener('keydown', function(event) {
+    if(event.key == 'Enter' || event.key == ' ') {
+      event.preventDefault();
+      toggle();
+    }
+  });
+}
+
 const visibilityListener = function () {
   document.addEventListener('visibilitychange', function() {
     switch(document.visibilityState) {

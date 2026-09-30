@@ -3,9 +3,9 @@
   {%- set lastcat = item.categories.last() %}
 
   {%- set itemlink %}
-  <span class="type">{{__('post.' + type)}}</span>
+  <span class="type">{{ _t('post.' + type) }}</span>
   <span class="category"><i class="ic i-flag"></i> {{lastcat.name}}</span>
-  <h3>{{ postText }}</h3>
+  <h3>{{ _title(item, postText) }}</h3>
   {% endset %}
 
   {{ _url(item.path, itemlink, {itemprop: 'url', rel: type, 'data-background-image': _cover(item), title: postText}) }}

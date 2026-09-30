@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var l=localStorage.getItem('lang');if(l!=='zh'&&l!=='en'){l=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en'}document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l==='zh'?'zh-CN':'en')})()</script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#FFF">
@@ -57,9 +58,9 @@
           <div class="pjax">
           
             <a href="/" class="logo" rel="start"><p class="artboard">Ruyi Zhang</p>
-              <h1 itemprop="name headline" class="title">Maggie's Rose Garden</h1>
+              <h1 itemprop="name headline" class="title"><span class="lang-en">Maggie's Rose Garden</span><span class="lang-zh">Maggie 的玫瑰园</span></h1>
             </a>
-            <p class="meta" itemprop="description">= In my barren land you are the final rose. =</p>
+            <p class="meta" itemprop="description">= <span class="lang-en">In my barren land you are the final rose.</span><span class="lang-zh">在我荒芜的土地上，你是最后的玫瑰。</span> =</p>
           
           </div>
         </div>
@@ -76,6 +77,9 @@
       <li class="item title"><a href="/" rel="start">Ruyi Zhang</a></li>
     </ul>
     <ul class="right">
+      <li class="item lang" title="English / 中文" role="button" tabindex="0" aria-label="Switch language / 切换语言">
+        <span class="lang-en">中</span><span class="lang-zh">EN</span>
+      </li>
       <li class="item theme">
         <i class="ic i-sun"></i>
       </li>
@@ -89,12 +93,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeu1usa7j20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicit31ffoj20zk0m8naf.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexe4oykj20zk0m87ji.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexe4oykj20zk0m87ji.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicljitigmj20zk0m87fp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicliwyw55j20zk0m8hdt.jpg"></li>
         </ul>
       </div>
     </header>
@@ -116,7 +120,7 @@
         <div id="main" class="pjax">
           
   <div class="index wrap">
-      <h2 class="divider">Sticky Posts</h2>
+      <h2 class="divider"><span class="lang-en">Sticky Posts</span><span class="lang-zh">置顶文章</span></h2>
       <div class="segments sticky">
           
 <article class="item">
@@ -134,14 +138,12 @@
   </span>
 </div>
 
-    <h3><a href="/2026/03/19/ControlScene/" itemprop="url" title="ControlScene: Controllable Text-to-3D Scene Generation">ControlScene: Controllable Text-to-3D Scene Generation</a></h3>
+    <h3><a href="/2026/03/19/ControlScene/" itemprop="url" title="ControlScene: Controllable Text-to-3D Scene Generation"><span class="lang-en">ControlScene: Controllable Text-to-3D Scene Generation</span><span class="lang-zh">ControlScene：可控的文本到三维场景生成</span></a></h3>
     <div class="excerpt">
-        # ControlScene: Controllable Text-to-3D Scene Generation via Structured Layout Priors
-Ruyi Zhang, et al. · CAAI Trans. · Accepted · First Author
-# Motivation
-Text-to-3D scene generation makes 3D content creation as easy as writing a sentence, with uses in VR, games, interior design and simulation....
+        <span class="lang-en">ControlScene uses LLM-driven structured layout priors and the LayoutVerse-20K dataset to generate semantically faithful, spatially coherent and controllable 3D scenes.</span><span class="lang-zh">ControlScene 借助大语言模型驱动的结构化布局先验与 LayoutVerse-20K 数据集，生成语义忠实、空间合理且可控的三维场景。</span>
+      
     </div>
-    <a href="/2026/03/19/ControlScene/" itemprop="url" title="ControlScene: Controllable Text-to-3D Scene Generation" class="btn">more...</a>
+    <a href="/2026/03/19/ControlScene/" itemprop="url" title="ControlScene: Controllable Text-to-3D Scene Generation" class="btn"><span class="lang-en">more...</span><span class="lang-zh">阅读全文</span></a>
   </div>
 </article>
 
@@ -161,19 +163,17 @@ Text-to-3D scene generation makes 3D content creation as easy as writing a sente
   </span>
 </div>
 
-    <h3><a href="/2026/03/15/Count_Curriculum/" itemprop="url" title="Count-Curriculum: Number-Free Figure Matching">Count-Curriculum: Number-Free Figure Matching</a></h3>
+    <h3><a href="/2026/03/15/Count_Curriculum/" itemprop="url" title="Count-Curriculum: Number-Free Figure Matching"><span class="lang-en">Count-Curriculum: Number-Free Figure Matching</span><span class="lang-zh">Count-Curriculum：无编号的论文图表匹配</span></a></h3>
     <div class="excerpt">
-        # Fine-Grained Cross-Modal Alignment for Unlinked Visual References in Scientific Papers
-Ruyi Zhang, et al. · Ready for Submission · First Author
-# Motivation
-Matching a citation sentence to the figure or table it refers to is a basic step in academic document understanding. Most prior work takes a...
+        <span class="lang-en">Count-Curriculum fine-tunes MLLMs from easy to hard to match citation sentences with figures in scientific papers without figure numbers, reaching 75.70% accuracy.</span><span class="lang-zh">Count-Curriculum 以由易到难的课程学习微调多模态大模型，在不依赖图表编号的情况下匹配论文引用句与图表，准确率达 75.70%。</span>
+      
     </div>
-    <a href="/2026/03/15/Count_Curriculum/" itemprop="url" title="Count-Curriculum: Number-Free Figure Matching" class="btn">more...</a>
+    <a href="/2026/03/15/Count_Curriculum/" itemprop="url" title="Count-Curriculum: Number-Free Figure Matching" class="btn"><span class="lang-en">more...</span><span class="lang-zh">阅读全文</span></a>
   </div>
 </article>
 
       </div>
-    <h2 class="divider">Post List</h2>
+    <h2 class="divider"><span class="lang-en">Post List</span><span class="lang-zh">文章列表</span></h2>
     <div class="segments posts">
         
 <article class="item">
@@ -191,14 +191,12 @@ Matching a citation sentence to the figure or table it refers to is a basic step
   </span>
 </div>
 
-    <h3><a href="/2026/03/05/VVM_Tuning/" itemprop="url" title="Generalize LMMs to Versatile Visual Modalities">Generalize LMMs to Versatile Visual Modalities</a></h3>
+    <h3><a href="/2026/03/05/VVM_Tuning/" itemprop="url" title="Generalize LMMs to Versatile Visual Modalities"><span class="lang-en">Generalize LMMs to Versatile Visual Modalities</span><span class="lang-zh">将多模态大模型泛化到多样视觉模态</span></a></h3>
     <div class="excerpt">
-        # Generalize LMMs to Versatile Visual Modalities via Fabricated Modality Synthesis
-S. Yuan, Y. Li, Ruyi Zhang, et al. · ECCV 2026 · Accepted
-# Idea
-Large Multimodal Models (LMMs) are strong on RGB images, but their ability to generalize to unseen visual modalities (thermal, depth, X-ray and more) is...
+        <span class="lang-en">VVM-Tuning uses fabricated modality synthesis and modality contexts to help LMMs generalize zero-shot to unseen visual modalities such as thermal, depth and X-ray.</span><span class="lang-zh">VVM-Tuning 借助合成模态与模态上下文，使多模态大模型能够零样本泛化到热红外、深度、X 光等未见视觉模态。</span>
+      
     </div>
-    <a href="/2026/03/05/VVM_Tuning/" itemprop="url" title="Generalize LMMs to Versatile Visual Modalities" class="btn">more...</a>
+    <a href="/2026/03/05/VVM_Tuning/" itemprop="url" title="Generalize LMMs to Versatile Visual Modalities" class="btn"><span class="lang-en">more...</span><span class="lang-zh">阅读全文</span></a>
   </div>
 </article>
 
@@ -218,14 +216,12 @@ Large Multimodal Models (LMMs) are strong on RGB images, but their ability to ge
   </span>
 </div>
 
-    <h3><a href="/2026/02/13/Video_Restoration/" itemprop="url" title="Task-Uncertainty-Aware Video Restoration">Task-Uncertainty-Aware Video Restoration</a></h3>
+    <h3><a href="/2026/02/13/Video_Restoration/" itemprop="url" title="Task-Uncertainty-Aware Video Restoration"><span class="lang-en">Task-Uncertainty-Aware Video Restoration</span><span class="lang-zh">任务不确定性感知的视频复原</span></a></h3>
     <div class="excerpt">
-        # Task-Uncertainty-Aware Video Restoration for Time-varying Unknown Degradations
-Wenrui Li, Hongtao Chen, Ruyi Zhang, Zhe Yang, Wangmeng Zuo · IEEE TMM · Accepted
-# Problem
-Real-world videos suffer from time-varying unknown degradations (TUD): the types and severities of corruption change...
+        <span class="lang-en">DOVENet restores videos with time-varying unknown degradations via an unrolled MAP network and task-uncertainty regularization that emphasizes hard cases.</span><span class="lang-zh">DOVENet 通过展开式 MAP 网络与任务不确定性正则化，复原具有时变未知退化的视频，并重点优化困难样本。</span>
+      
     </div>
-    <a href="/2026/02/13/Video_Restoration/" itemprop="url" title="Task-Uncertainty-Aware Video Restoration" class="btn">more...</a>
+    <a href="/2026/02/13/Video_Restoration/" itemprop="url" title="Task-Uncertainty-Aware Video Restoration" class="btn"><span class="lang-en">more...</span><span class="lang-zh">阅读全文</span></a>
   </div>
 </article>
 
@@ -245,14 +241,12 @@ Real-world videos suffer from time-varying unknown degradations (TUD): the types
   </span>
 </div>
 
-    <h3><a href="/2026/01/18/Audio_Visual_Event_Localization/" itemprop="url" title="Open-Vocabulary Audio-Visual Event Localization">Open-Vocabulary Audio-Visual Event Localization</a></h3>
+    <h3><a href="/2026/01/18/Audio_Visual_Event_Localization/" itemprop="url" title="Open-Vocabulary Audio-Visual Event Localization"><span class="lang-en">Open-Vocabulary Audio-Visual Event Localization</span><span class="lang-zh">开放词汇音视频事件定位</span></a></h3>
     <div class="excerpt">
-        # Hierarchical Semantic-Constrained Heterogeneous Graph for Audio-Visual Event Localization
-Zhe Yang, Ruyi Zhang, Hongtao Chen, Wenrui Li, Hengyu Man · IEEE TIP · Under Review
-# Problem
-Open-vocabulary audio-visual event localization (OV-AVEL) jointly models audio and visual cues to recognize and...
+        <span class="lang-en">HSCHG builds a hierarchical heterogeneous graph in hyperbolic space to recognize and temporally localize audio-visual events, including unseen categories.</span><span class="lang-zh">HSCHG 在双曲空间中构建层次化异构图，用于识别并时序定位音视频事件，包括训练中未见过的类别。</span>
+      
     </div>
-    <a href="/2026/01/18/Audio_Visual_Event_Localization/" itemprop="url" title="Open-Vocabulary Audio-Visual Event Localization" class="btn">more...</a>
+    <a href="/2026/01/18/Audio_Visual_Event_Localization/" itemprop="url" title="Open-Vocabulary Audio-Visual Event Localization" class="btn"><span class="lang-en">more...</span><span class="lang-zh">阅读全文</span></a>
   </div>
 </article>
 
@@ -272,12 +266,12 @@ Open-vocabulary audio-visual event localization (OV-AVEL) jointly models audio a
   </span>
 </div>
 
-    <h3><a href="/2023/10/27/Hex_Bots/" itemprop="url" title="Hex">Hex</a></h3>
+    <h3><a href="/2023/10/27/Hex_Bots/" itemprop="url" title="Hex"><span class="lang-en">Hex</span><span class="lang-zh">Hex 六贯棋</span></a></h3>
     <div class="excerpt">
-        # Hex Bot
-Hex Game (Hex): Hex is a two-player abstract strategy game played on a hexagonal grid. The objective of the game is for each player to create an unbroken chain of their own pieces from one side of the hexagonal board to the opposite side. The two sides are typically labeled as “Blue” and...
+        <span class="lang-en">A bot for Hex, a two-player abstract strategy game on a hexagonal grid where each player tries to connect their two sides of the board.</span><span class="lang-zh">一个 Hex（六贯棋）对弈机器人。Hex 是在六边形棋盘上进行的双人抽象策略游戏，双方各自尝试连通棋盘的两条对边。</span>
+      
     </div>
-    <a href="/2023/10/27/Hex_Bots/" itemprop="url" title="Hex" class="btn">more...</a>
+    <a href="/2023/10/27/Hex_Bots/" itemprop="url" title="Hex" class="btn"><span class="lang-en">more...</span><span class="lang-zh">阅读全文</span></a>
   </div>
 </article>
 
@@ -297,14 +291,12 @@ Hex Game (Hex): Hex is a two-player abstract strategy game played on a hexagonal
   </span>
 </div>
 
-    <h3><a href="/2023/10/27/A_Fuzzy_Logic-based_Washing_Machine/" itemprop="url" title="A Fuzzy Logic-based Washing Machine">A Fuzzy Logic-based Washing Machine</a></h3>
+    <h3><a href="/2023/10/27/A_Fuzzy_Logic-based_Washing_Machine/" itemprop="url" title="A Fuzzy Logic-based Washing Machine"><span class="lang-en">A Fuzzy Logic-based Washing Machine</span><span class="lang-zh">基于模糊逻辑的洗衣机</span></a></h3>
     <div class="excerpt">
-        # A Fuzzy Logic-based Washing Machine
-
-# Fuzzy Logic
-A Fuzzy Logic-based washing machine is equipped with an artificial intelligence (AI) system that uses Fuzzy Logic to optimize the washing process. Fuzzy Logic is a mathematical approach that allows the machine to make decisions based on “fuzzy” or...
+        <span class="lang-en">A washing machine controller that uses Fuzzy Logic to make decisions from imprecise inputs and optimize the washing process.</span><span class="lang-zh">一个利用模糊逻辑（Fuzzy Logic）根据不精确输入做出决策、从而优化洗涤过程的洗衣机控制系统。</span>
+      
     </div>
-    <a href="/2023/10/27/A_Fuzzy_Logic-based_Washing_Machine/" itemprop="url" title="A Fuzzy Logic-based Washing Machine" class="btn">more...</a>
+    <a href="/2023/10/27/A_Fuzzy_Logic-based_Washing_Machine/" itemprop="url" title="A Fuzzy Logic-based Washing Machine" class="btn"><span class="lang-en">more...</span><span class="lang-zh">阅读全文</span></a>
   </div>
 </article>
 
@@ -324,14 +316,12 @@ A Fuzzy Logic-based washing machine is equipped with an artificial intelligence 
   </span>
 </div>
 
-    <h3><a href="/2023/10/27/Snake_Game/" itemprop="url" title="Snake Game">Snake Game</a></h3>
+    <h3><a href="/2023/10/27/Snake_Game/" itemprop="url" title="Snake Game"><span class="lang-en">Snake Game</span><span class="lang-zh">贪吃蛇游戏</span></a></h3>
     <div class="excerpt">
-        # Snake Game
-
-# Rules of the game to be implemented
-The Snake game is a classic and simple video game in which the player controls a snake that moves around a confined playing area, trying to collect food items while avoiding collisions with the walls of the playing area and the snake’s own tail....
+        <span class="lang-en">A classic Snake game where the player steers a growing snake to collect food while avoiding the walls and its own tail.</span><span class="lang-zh">经典贪吃蛇游戏：玩家操控不断变长的蛇去吃食物，同时避免撞到墙壁或自己的尾巴。</span>
+      
     </div>
-    <a href="/2023/10/27/Snake_Game/" itemprop="url" title="Snake Game" class="btn">more...</a>
+    <a href="/2023/10/27/Snake_Game/" itemprop="url" title="Snake Game" class="btn"><span class="lang-en">more...</span><span class="lang-zh">阅读全文</span></a>
   </div>
 </article>
 
@@ -351,18 +341,12 @@ The Snake game is a classic and simple video game in which the player controls a
   </span>
 </div>
 
-    <h3><a href="/2023/10/27/Chess_video_game/" itemprop="url" title="Chess Video Game">Chess Video Game</a></h3>
+    <h3><a href="/2023/10/27/Chess_video_game/" itemprop="url" title="Chess Video Game"><span class="lang-en">Chess Video Game</span><span class="lang-zh">国际象棋电子游戏</span></a></h3>
     <div class="excerpt">
-        # Chess Video Game
-
-# Rules of the game to be implemented
-This chess game, will implement a subset of the rules of chess including:
-1.The initial setup as defined in the Rules of Chess wikipedia page.
-2.All the basic moves.
-3.The game ends when a king is captured or one player resigns.
-4.Note that...
+        <span class="lang-en">A chess video game implementing the standard initial setup and basic moves, ending when a king is captured or a player resigns.</span><span class="lang-zh">一款国际象棋电子游戏，实现了标准开局布置和基本走法，当一方的王被吃掉或有玩家认输时游戏结束。</span>
+      
     </div>
-    <a href="/2023/10/27/Chess_video_game/" itemprop="url" title="Chess Video Game" class="btn">more...</a>
+    <a href="/2023/10/27/Chess_video_game/" itemprop="url" title="Chess Video Game" class="btn"><span class="lang-en">more...</span><span class="lang-zh">阅读全文</span></a>
   </div>
 </article>
 
@@ -382,14 +366,12 @@ This chess game, will implement a subset of the rules of chess including:
   </span>
 </div>
 
-    <h3><a href="/2023/10/27/Maze_Solver/" itemprop="url" title="Maze Solver">Maze Solver</a></h3>
+    <h3><a href="/2023/10/27/Maze_Solver/" itemprop="url" title="Maze Solver"><span class="lang-en">Maze Solver</span><span class="lang-zh">迷宫求解器</span></a></h3>
     <div class="excerpt">
-        # Maze Solver
-
-# Performance
-The MazeApplication is a JavaFX application that allows users to specify a text file containing a maze representation. The graphical representation of the maze is displayed to the user. The user will also be able to: (i) step through the solving process with the...
+        <span class="lang-en">A JavaFX maze solver that loads a maze from a text file, visualises the solving process step by step, and can save and load route-solving state.</span><span class="lang-zh">一个基于 JavaFX 的迷宫求解器，可从文本文件加载迷宫、逐步可视化求解过程，并支持保存和加载寻路状态。</span>
+      
     </div>
-    <a href="/2023/10/27/Maze_Solver/" itemprop="url" title="Maze Solver" class="btn">more...</a>
+    <a href="/2023/10/27/Maze_Solver/" itemprop="url" title="Maze Solver" class="btn"><span class="lang-en">more...</span><span class="lang-zh">阅读全文</span></a>
   </div>
 </article>
 
@@ -409,16 +391,12 @@ The MazeApplication is a JavaFX application that allows users to specify a text 
   </span>
 </div>
 
-    <h3><a href="/2022/05/30/Vehicle_Poses/" itemprop="url" title="Features for Estimating Autonomous Vehicle Poses">Features for Estimating Autonomous Vehicle Poses</a></h3>
+    <h3><a href="/2022/05/30/Vehicle_Poses/" itemprop="url" title="Features for Estimating Autonomous Vehicle Poses"><span class="lang-en">Features for Estimating Autonomous Vehicle Poses</span><span class="lang-zh">用于估计自动驾驶车辆位姿的视觉特征</span></a></h3>
     <div class="excerpt">
-        # Features for Estimating Autonomous Vehicle Poses
-
-# Problem Explaination
-implement and compare three different strategies for matching visual
-features in a series of images captured during the navigation of an autonomous vehicle (AV).
-These features are used in estimating poses (i.e., camera...
+        <span class="lang-en">Implementing and comparing three strategies for matching visual features across image sequences from an autonomous vehicle, used for visual odometry pose estimation.</span><span class="lang-zh">实现并比较三种在自动驾驶车辆图像序列中匹配视觉特征的策略，用于基于视觉里程计的位姿估计。</span>
+      
     </div>
-    <a href="/2022/05/30/Vehicle_Poses/" itemprop="url" title="Features for Estimating Autonomous Vehicle Poses" class="btn">more...</a>
+    <a href="/2022/05/30/Vehicle_Poses/" itemprop="url" title="Features for Estimating Autonomous Vehicle Poses" class="btn"><span class="lang-en">more...</span><span class="lang-zh">阅读全文</span></a>
   </div>
 </article>
 
@@ -438,14 +416,12 @@ These features are used in estimating poses (i.e., camera...
   </span>
 </div>
 
-    <h3><a href="/2022/05/19/Search_engine_in_a_room/" itemprop="url" title="Search Engine">Search Engine</a></h3>
+    <h3><a href="/2022/05/19/Search_engine_in_a_room/" itemprop="url" title="Search Engine"><span class="lang-en">Search Engine</span><span class="lang-zh">房间里的搜索引擎</span></a></h3>
     <div class="excerpt">
-        # Search Engine In a Room (Bob)
-
-# Prolog
-Prolog is a high-level programming language that is primarily used for symbolic reasoning and manipulation. It is particularly well-suited for tasks related to artificial intelligence and knowledge representation. Here’s a basic explanation of...
+        <span class="lang-en">A Prolog-based search engine in a room (Bob), with an overview of Prolog's declarative, rule-based logical inference and a simple example.</span><span class="lang-zh">一个基于 Prolog 的“房间里的搜索引擎”（Bob），并概述 Prolog 声明式、基于规则的逻辑推理特性，附简单示例。</span>
+      
     </div>
-    <a href="/2022/05/19/Search_engine_in_a_room/" itemprop="url" title="Search Engine" class="btn">more...</a>
+    <a href="/2022/05/19/Search_engine_in_a_room/" itemprop="url" title="Search Engine" class="btn"><span class="lang-en">more...</span><span class="lang-zh">阅读全文</span></a>
   </div>
 </article>
 
@@ -469,29 +445,29 @@ Prolog is a high-level programming language that is primarily used for symbolic 
 
   <div class="panels">
     <div class="inner">
-      <div class="contents panel pjax" data-title="Contents">
+      <div class="contents panel pjax" data-title="Contents" data-title-zh="文章目录">
       </div>
-      <div class="related panel pjax" data-title="Related">
+      <div class="related panel pjax" data-title="Related" data-title-zh="系列文章">
       </div>
-      <div class="overview panel" data-title="Overview">
+      <div class="overview panel" data-title="Overview" data-title-zh="站点概览">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <img class="image" itemprop="image" alt="Ruyi Zhang"
       data-src="/images/avatar.jpg">
   <p class="name" itemprop="name">Ruyi Zhang</p>
-  <div class="description" itemprop="description">Hiiiiiii, I am a PhD student at Harbin Institute of Technology (supervised by Prof. Wangmeng Zuo). My research focuses on Multimodal Large Language Models, Semantic Alignment, Open-World Generalization and 3D Scene Generation.</div>
+  <div class="description" itemprop="description"><span class="lang-en">Hiiiiiii, I am a PhD student at Harbin Institute of Technology (supervised by Prof. Wangmeng Zuo). My research focuses on Multimodal Large Language Models, Semantic Alignment, Open-World Generalization and 3D Scene Generation.</span><span class="lang-zh">你好呀！我是哈尔滨工业大学的博士生（导师：左旺孟教授），研究方向为多模态大语言模型、语义对齐、开放场景泛化与 3D 场景生成。</span></div>
 </div>
 
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
         <span class="count">13</span>
-        <span class="name">posts</span>
+        <span class="name"><span class="lang-en">posts</span><span class="lang-zh">文章</span></span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
         <span class="count">3</span>
-        <span class="name">tags</span>
+        <span class="name"><span class="lang-en">tags</span><span class="lang-zh">标签</span></span>
       </a>
     </div>
 </nav>
@@ -505,32 +481,32 @@ Prolog is a high-level programming language that is primarily used for symbolic 
   
     
   <li class="item">
-    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+    <a href="/" rel="section"><i class="ic i-home"></i><span class="lang-en">Home</span><span class="lang-zh">首页</span></a>
   </li>
 
     
   <li class="item">
-    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
+    <a href="/about/" rel="section"><i class="ic i-user"></i><span class="lang-en">About</span><span class="lang-zh">关于我</span></a>
   </li>
 
     
   <li class="item">
-    <a href="/publications/" rel="section"><i class="ic i-file"></i>Publications</a>
+    <a href="/publications/" rel="section"><i class="ic i-file"></i><span class="lang-en">Publications</span><span class="lang-zh">学术论文</span></a>
   </li>
 
         
   <li class="item dropdown">
-      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+      <a href="javascript:void(0);"><i class="ic i-feather"></i><span class="lang-en">Posts</span><span class="lang-zh">文章</span></a>
     <ul class="submenu">
 
         
   <li class="item">
-    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i><span class="lang-en">Archives</span><span class="lang-zh">归档</span></a>
   </li>
 
         
   <li class="item">
-    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i><span class="lang-en">Tags</span><span class="lang-zh">标签</span></a>
   </li>
 
   </ul>
@@ -562,7 +538,7 @@ Prolog is a high-level programming language that is primarily used for symbolic 
         <div class="widgets">
           
 <div class="rpost pjax">
-  <h2>Random Posts</h2>
+  <h2><span class="lang-en">Random Posts</span><span class="lang-zh">随机文章</span></h2>
   <ul>
       
   <li class="item">
@@ -570,7 +546,7 @@ Prolog is a high-level programming language that is primarily used for symbolic 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Hex_Bots/" title="Hex">Hex</a></span>
+    <span><a href="/2022/05/19/Search_engine_in_a_room/" title="Search Engine"><span class="lang-en">Search Engine</span><span class="lang-zh">房间里的搜索引擎</span></a></span>
   </li>
 
       
@@ -579,7 +555,7 @@ Prolog is a high-level programming language that is primarily used for symbolic 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Snake_Game/" title="Snake Game">Snake Game</a></span>
+    <span><a href="/2023/10/27/Snake_Game/" title="Snake Game"><span class="lang-en">Snake Game</span><span class="lang-zh">贪吃蛇游戏</span></a></span>
   </li>
 
       
@@ -588,7 +564,7 @@ Prolog is a high-level programming language that is primarily used for symbolic 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2026/01/18/Audio_Visual_Event_Localization/" title="Open-Vocabulary Audio-Visual Event Localization">Open-Vocabulary Audio-Visual Event Localization</a></span>
+    <span><a href="/2026/01/18/Audio_Visual_Event_Localization/" title="Open-Vocabulary Audio-Visual Event Localization"><span class="lang-en">Open-Vocabulary Audio-Visual Event Localization</span><span class="lang-zh">开放词汇音视频事件定位</span></a></span>
   </li>
 
       
@@ -597,7 +573,7 @@ Prolog is a high-level programming language that is primarily used for symbolic 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2026/03/15/Count_Curriculum/" title="Count-Curriculum: Number-Free Figure Matching">Count-Curriculum: Number-Free Figure Matching</a></span>
+    <span><a href="/2026/03/05/VVM_Tuning/" title="Generalize LMMs to Versatile Visual Modalities"><span class="lang-en">Generalize LMMs to Versatile Visual Modalities</span><span class="lang-zh">将多模态大模型泛化到多样视觉模态</span></a></span>
   </li>
 
       
@@ -606,7 +582,7 @@ Prolog is a high-level programming language that is primarily used for symbolic 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2022/05/30/Vehicle_Poses/" title="Features for Estimating Autonomous Vehicle Poses">Features for Estimating Autonomous Vehicle Poses</a></span>
+    <span><a href="/2022/04/15/Interactive_Systems/" title="Interactive Systems"><span class="lang-en">Interactive Systems</span><span class="lang-zh">交互式系统</span></a></span>
   </li>
 
       
@@ -615,7 +591,7 @@ Prolog is a high-level programming language that is primarily used for symbolic 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2026/03/05/VVM_Tuning/" title="Generalize LMMs to Versatile Visual Modalities">Generalize LMMs to Versatile Visual Modalities</a></span>
+    <span><a href="/2023/10/27/Chess_video_game/" title="Chess Video Game"><span class="lang-en">Chess Video Game</span><span class="lang-zh">国际象棋电子游戏</span></a></span>
   </li>
 
       
@@ -624,7 +600,7 @@ Prolog is a high-level programming language that is primarily used for symbolic 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/A_Fuzzy_Logic-based_Washing_Machine/" title="A Fuzzy Logic-based Washing Machine">A Fuzzy Logic-based Washing Machine</a></span>
+    <span><a href="/2023/10/27/A_Fuzzy_Logic-based_Washing_Machine/" title="A Fuzzy Logic-based Washing Machine"><span class="lang-en">A Fuzzy Logic-based Washing Machine</span><span class="lang-zh">基于模糊逻辑的洗衣机</span></a></span>
   </li>
 
       
@@ -633,7 +609,7 @@ Prolog is a high-level programming language that is primarily used for symbolic 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Chess_video_game/" title="Chess Video Game">Chess Video Game</a></span>
+    <span><a href="/2026/03/19/ControlScene/" title="ControlScene: Controllable Text-to-3D Scene Generation"><span class="lang-en">ControlScene: Controllable Text-to-3D Scene Generation</span><span class="lang-zh">ControlScene：可控的文本到三维场景生成</span></a></span>
   </li>
 
       
@@ -642,7 +618,7 @@ Prolog is a high-level programming language that is primarily used for symbolic 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2022/05/19/Search_engine_in_a_room/" title="Search Engine">Search Engine</a></span>
+    <span><a href="/2023/10/27/Hex_Bots/" title="Hex"><span class="lang-en">Hex</span><span class="lang-zh">Hex 六贯棋</span></a></span>
   </li>
 
       
@@ -651,13 +627,13 @@ Prolog is a high-level programming language that is primarily used for symbolic 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Maze_Solver/" title="Maze Solver">Maze Solver</a></span>
+    <span><a href="/2023/10/27/Maze_Solver/" title="Maze Solver"><span class="lang-en">Maze Solver</span><span class="lang-zh">迷宫求解器</span></a></span>
   </li>
 
   </ul>
 </div>
 <div>
-  <h2>Recent Comments</h2>
+  <h2><span class="lang-en">Recent Comments</span><span class="lang-zh">最新评论</span></h2>
   <ul class="leancloud-recent-comment"></ul>
 </div>
 
@@ -673,7 +649,7 @@ Prolog is a high-level programming language that is primarily used for symbolic 
     <span class="author" itemprop="copyrightHolder">Ruyi Zhang @ Ruyi Zhang</span>
   </div>
   <div class="powered-by">
-    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+    <span class="lang-en">Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></span><span class="lang-zh">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></span>
   </div>
 </div>
 

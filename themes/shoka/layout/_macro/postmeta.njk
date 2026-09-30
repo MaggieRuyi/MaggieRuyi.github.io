@@ -6,7 +6,7 @@
       <i class="ic i-calendar"></i>
     </span>
     {%- if full %}
-    <span class="text">{{ __('post.posted') }}</span>
+    <span class="text">{{ _t('post.posted') }}</span>
     {%- endif %}
     <time itemprop="dateCreated datePublished" datetime="{{ moment(item.date).format() }}">{{ date(item.date) }}</time>
   </span>

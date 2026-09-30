@@ -121,6 +121,7 @@ const siteInit = function () {
 
   visibilityListener()
   themeColorListener()
+  langListener()
 
   algoliaSearch(pjax)
 

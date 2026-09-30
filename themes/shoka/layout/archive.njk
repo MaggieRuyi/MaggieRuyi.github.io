@@ -111,7 +111,7 @@
               {{ _url(post.link, postText + postTitleIcon, {class: 'external', itemprop: 'url'}) }}
             {% else %}
               <a href="{{ url_for(post.path) }}" itemprop="url">
-                <span itemprop="name">{{ post.title or __('post.untitled') }}</span>
+                <span itemprop="name">{{ _title(post, __('post.untitled')) }}</span>
               </a>
             {%- endif %}
           </div>

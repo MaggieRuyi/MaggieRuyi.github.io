@@ -1,0 +1,18 @@
+// Bilingual switch: <html data-lang="en|zh"> decides which language is shown.
+html:not([data-lang="zh"]) .lang-zh,
+html[data-lang="zh"] .lang-en {
+  display: none !important;
+}
+
+#nav .right .item.lang {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: .95em;
+  min-width: 2em;
+  text-align: center;
+}
+
+// Square photo avatar keeps the round frame of the theme
+#sidebar .author .image {
+  object-fit: cover;
+}

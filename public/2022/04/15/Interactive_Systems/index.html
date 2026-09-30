@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var l=localStorage.getItem('lang');if(l!=='zh'&&l!=='en'){l=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en'}document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l==='zh'?'zh-CN':'en')})()</script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#FFF">
@@ -60,7 +61,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">Interactive Systems
+  <h1 itemprop="name headline"><span class="lang-en">Interactive Systems</span><span class="lang-zh">交互式系统</span>
   </h1>
   
 <div class="meta">
@@ -68,7 +69,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <span class="text">Posted on</span>
+    <span class="text"><span class="lang-en">Posted on</span><span class="lang-zh">发表于</span></span>
     <time itemprop="dateCreated datePublished" datetime="2022-04-15T12:52:27+08:00">2022-04-15</time>
   </span>
 </div>
@@ -89,6 +90,9 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
       <li class="item title"><a href="/" rel="start">Ruyi Zhang</a></li>
     </ul>
     <ul class="right">
+      <li class="item lang" title="English / 中文" role="button" tabindex="0" aria-label="Switch language / 切换语言">
+        <span class="lang-en">中</span><span class="lang-zh">EN</span>
+      </li>
       <li class="item theme">
         <i class="ic i-sun"></i>
       </li>
@@ -125,7 +129,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
     
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
-<span><a href="/">Home</a></span>
+<span><a href="/"><span class="lang-en">Home</span><span class="lang-zh">首页</span></a></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
@@ -144,7 +148,7 @@ Ruyi Zhang = Maggie's Rose Garden = In my barren land you are the final rose.</t
   <div class="body md" itemprop="articleBody">
     
 
-    <hr>
+    <div class="lang-en">
 <h1 id="interactive-systems"><a class="markdownIt-Anchor" href="#interactive-systems">#</a> Interactive Systems</h1>
 <hr>
 <h2 id="what-is-an-interactive-system"><a class="markdownIt-Anchor" href="#what-is-an-interactive-system">#</a> “What is an interactive system?”</h2>
@@ -156,7 +160,7 @@ Distributed systems allow for the sharing of resources, including software share
 </ul>
 <ol>
 <li>only one pair of people can use this chat system</li>
-<li>the first person to open the system is client1st and the second person to open the system is clent2nd.</li>
+<li>the first person to open the system is client1st and the second person to open the system is client2nd.</li>
 <li>each person can only type one message at a time, and then they must wait for the other person to reply.</li>
 <li>while one person is typing, the other person must wait.</li>
 <li>type end to end the program.</li>
@@ -181,8 +185,49 @@ In the waiting state , because the other member does not have any input, at this
 In the wait state, all we need to do is wait, so I set up a sleep three-second refresh to wait for input from the other member.<br>
 In the input state, we need to refresh the value of the message and then update the corresponding value on the server based on the new input.</li>
 <li>when ending the chat by typing ‘end’, the server needs to be cleared for the next time.<br>
-! <span class="exturl" data-url="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL01hZ2dpZVJ1eWkvTWFnZ2llUnV5aS5naXRodWIuaW8vc3JjL2ltYWdlL2NvbXAuanBlZw=="></span></li>
+<img data-src="https://raw.githubusercontent.com/MaggieRuyi/MaggieRuyi.github.io/src/image/comp.jpeg" alt=""></li>
 </ol>
+</div>
+<div class="lang-zh">
+<h1 id="交互式系统"><a class="markdownIt-Anchor" href="#交互式系统">#</a> 交互式系统</h1>
+<hr>
+<h2 id="什么是交互式系统"><a class="markdownIt-Anchor" href="#什么是交互式系统">#</a> “什么是交互式系统？”</h2>
+<p>分布式系统是指其组件分布在不同联网计算机上的系统，这些组件通过相互传递信息来进行通信并协调各自的行为，彼此交互以实现共同的目标。<br>
+分布式系统支持资源共享，包括由接入网络的各个系统共享的软件。分布式系统 / 分布式计算应用的例子有：内联网、互联网、万维网（WWW）、电子邮件、电信网络、电话网络以及蜂窝网络。</p>
+<h2 id="实现一个简单的分布式系统"><a class="markdownIt-Anchor" href="#实现一个简单的分布式系统">#</a> “实现一个简单的分布式系统”</h2>
+<ul>
+<li><strong>程序设计</strong>：</li>
+</ul>
+<ol>
+<li>该聊天系统只能供一对用户使用。</li>
+<li>第一个打开系统的人为 client1st，第二个打开系统的人为 client2nd。</li>
+<li>每人每次只能输入一条消息，之后必须等待对方回复。</li>
+<li>当一方正在输入时，另一方必须等待。</li>
+<li>输入 end 即可结束程序。</li>
+</ol>
+<ul>
+<li><strong>使用注意事项</strong>：</li>
+</ul>
+<ol>
+<li>同一个人不能连续输入相同的字符串，否则会被视为没有输入。</li>
+<li>不能输入换行符。</li>
+<li>双方都必须输入 ‘end’ 才能结束聊天。</li>
+</ol>
+<ul>
+<li><strong>结构框架</strong>：</li>
+</ul>
+<ol>
+<li>通过服务器中 key 的长度来判断是否为第一位成员：如果长度为 1，说明服务器为空，此前没有人打开聊天并输入过消息，那么该成员就是 client1st。</li>
+<li>接着需要判断用户是否还要继续聊天，即判断是否输入了 “end”。</li>
+<li>第一次输入需要单独处理，并在其中加入欢迎信息，提示用户自己是 client1st 还是 client2nd。判断是否为第一次输入并读取它有两种方式：第一种是直接判断 message1 和 message2；第二种是判断服务器中的 key 是否与 message 相同（注意，从服务器取出的字符串在解码后会多出一个 ‘\n’，因此不能直接比较，需要先补上 ‘\n’ 再进行判断）。</li>
+<li>之后需要明确两种状态的表示与判断：一种是输入状态，另一种是等待状态。<br>
+在等待状态下，由于对方还没有任何输入，此时服务器中对方消息对应的值与自己消息的值相同，因此可以据此判断是否处于等待状态。<br>
+在等待状态下只需等待即可，所以我设置了每隔三秒 sleep 一次并刷新，以等待另一位成员的输入。<br>
+在输入状态下，需要刷新消息的值，然后根据新的输入更新服务器上对应的值。</li>
+<li>当输入 ‘end’ 结束聊天时，需要清空服务器，以便下次使用。<br>
+<img data-src="https://raw.githubusercontent.com/MaggieRuyi/MaggieRuyi.github.io/src/image/comp.jpeg" alt=""></li>
+</ol>
+</div>
 
       <div class="tags">
           <a href="/tags/%E3%80%90System%E3%80%91/" rel="tag"><i class="ic i-tag"></i> 【System】</a>
@@ -197,14 +242,14 @@ In the input state, we need to refresh the value of the message and then update 
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2026-09-30 14:45:36" itemprop="dateModified" datetime="2026-09-30T14:45:36+08:00">2026-09-30</time>
+    <time title="Modified: 2026-09-30 20:49:29" itemprop="dateModified" datetime="2026-09-30T20:49:29+08:00">2026-09-30</time>
   </span>
 </div>
 
       
 <div class="reward">
-  <button><i class="ic i-heartbeat"></i> Donate</button>
-  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <button><i class="ic i-heartbeat"></i> <span class="lang-en">Donate</span><span class="lang-zh">赞赏</span></button>
+  <p><span class="lang-en">Give me a cup of [coffee]~(￣▽￣)~*</span><span class="lang-zh">请我喝[茶]~(￣▽￣)~*</span></p>
   <div id="qr">
       
       <div>
@@ -229,14 +274,14 @@ In the input state, we need to refresh the value of the message and then update 
 <div id="copyright">
 <ul>
   <li class="author">
-    <strong>Post author:  </strong>Ruyi Zhang <i class="ic i-at"><em>@</em></i>Maggie's Rose Garden
+    <strong><span class="lang-en">Post author</span><span class="lang-zh">本文作者</span>:  </strong>Ruyi Zhang <i class="ic i-at"><em>@</em></i>Maggie's Rose Garden
   </li>
   <li class="link">
-    <strong>Post link: </strong>
+    <strong><span class="lang-en">Post link</span><span class="lang-zh">本文链接</span>: </strong>
     <a href="http://maggieruyi.github.io/2022/04/15/Interactive_Systems/" title="Interactive Systems">http://maggieruyi.github.io/2022/04/15/Interactive_Systems/</a>
   </li>
   <li class="license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+    <strong><span class="lang-en">Copyright Notice</span><span class="lang-zh">版权声明</span>:  </strong><span class="lang-en">All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.</span><span class="lang-zh">本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</span>
   </li>
 </ul>
 </div>
@@ -255,9 +300,9 @@ In the input state, we need to refresh the value of the message and then update 
       
 
   <a href="/2022/05/19/Search_engine_in_a_room/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;MaggieRuyi&#x2F;MaggieRuyi.github.io&#x2F;src&#x2F;image&#x2F;room.jpeg" title="Search Engine">
-  <span class="type">Next Post</span>
+  <span class="type"><span class="lang-en">Next Post</span><span class="lang-zh">下一篇</span></span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>Search Engine</h3>
+  <h3><span class="lang-en">Search Engine</span><span class="lang-zh">房间里的搜索引擎</span></h3>
   </a>
 
     </div>
@@ -275,30 +320,30 @@ In the input state, we need to refresh the value of the message and then update 
 
   <div class="panels">
     <div class="inner">
-      <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#interactive-systems"><span class="toc-number">1.</span> <span class="toc-text"> Interactive Systems</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#what-is-an-interactive-system"><span class="toc-number">1.1.</span> <span class="toc-text"> “What is an interactive system?”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#make-a-simple-distributed-system"><span class="toc-number">1.2.</span> <span class="toc-text"> “Make a simple distributed system.”</span></a></li></ol></li></ol>
+      <div class="contents panel pjax" data-title="Contents" data-title-zh="文章目录">
+          <div class="lang-en"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#interactive-systems"><span class="toc-number">1.</span> <span class="toc-text"> Interactive Systems</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#what-is-an-interactive-system"><span class="toc-number">1.1.</span> <span class="toc-text"> “What is an interactive system?”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#make-a-simple-distributed-system"><span class="toc-number">1.2.</span> <span class="toc-text"> “Make a simple distributed system.”</span></a></li></ol></li></ol></div><div class="lang-zh"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A4%E4%BA%92%E5%BC%8F%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.</span> <span class="toc-text"> 交互式系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%A4%E4%BA%92%E5%BC%8F%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.1.</span> <span class="toc-text"> “什么是交互式系统？”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.2.</span> <span class="toc-text"> “实现一个简单的分布式系统”</span></a></li></ol></li></ol></div>
       </div>
-      <div class="related panel pjax" data-title="Related">
+      <div class="related panel pjax" data-title="Related" data-title-zh="系列文章">
       </div>
-      <div class="overview panel" data-title="Overview">
+      <div class="overview panel" data-title="Overview" data-title-zh="站点概览">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <img class="image" itemprop="image" alt="Ruyi Zhang"
       data-src="/images/avatar.jpg">
   <p class="name" itemprop="name">Ruyi Zhang</p>
-  <div class="description" itemprop="description">Hiiiiiii, I am a PhD student at Harbin Institute of Technology (supervised by Prof. Wangmeng Zuo). My research focuses on Multimodal Large Language Models, Semantic Alignment, Open-World Generalization and 3D Scene Generation.</div>
+  <div class="description" itemprop="description"><span class="lang-en">Hiiiiiii, I am a PhD student at Harbin Institute of Technology (supervised by Prof. Wangmeng Zuo). My research focuses on Multimodal Large Language Models, Semantic Alignment, Open-World Generalization and 3D Scene Generation.</span><span class="lang-zh">你好呀！我是哈尔滨工业大学的博士生（导师：左旺孟教授），研究方向为多模态大语言模型、语义对齐、开放场景泛化与 3D 场景生成。</span></div>
 </div>
 
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
         <span class="count">13</span>
-        <span class="name">posts</span>
+        <span class="name"><span class="lang-en">posts</span><span class="lang-zh">文章</span></span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
         <span class="count">3</span>
-        <span class="name">tags</span>
+        <span class="name"><span class="lang-en">tags</span><span class="lang-zh">标签</span></span>
       </a>
     </div>
 </nav>
@@ -312,32 +357,32 @@ In the input state, we need to refresh the value of the message and then update 
   
     
   <li class="item">
-    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+    <a href="/" rel="section"><i class="ic i-home"></i><span class="lang-en">Home</span><span class="lang-zh">首页</span></a>
   </li>
 
     
   <li class="item">
-    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
+    <a href="/about/" rel="section"><i class="ic i-user"></i><span class="lang-en">About</span><span class="lang-zh">关于我</span></a>
   </li>
 
     
   <li class="item">
-    <a href="/publications/" rel="section"><i class="ic i-file"></i>Publications</a>
+    <a href="/publications/" rel="section"><i class="ic i-file"></i><span class="lang-en">Publications</span><span class="lang-zh">学术论文</span></a>
   </li>
 
         
   <li class="item dropdown">
-      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+      <a href="javascript:void(0);"><i class="ic i-feather"></i><span class="lang-en">Posts</span><span class="lang-zh">文章</span></a>
     <ul class="submenu">
 
         
   <li class="item">
-    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i><span class="lang-en">Archives</span><span class="lang-zh">归档</span></a>
   </li>
 
         
   <li class="item">
-    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i><span class="lang-en">Tags</span><span class="lang-zh">标签</span></a>
   </li>
 
   </ul>
@@ -369,7 +414,7 @@ In the input state, we need to refresh the value of the message and then update 
         <div class="widgets">
           
 <div class="rpost pjax">
-  <h2>Random Posts</h2>
+  <h2><span class="lang-en">Random Posts</span><span class="lang-zh">随机文章</span></h2>
   <ul>
       
   <li class="item">
@@ -377,7 +422,7 @@ In the input state, we need to refresh the value of the message and then update 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2026/03/15/Count_Curriculum/" title="Count-Curriculum: Number-Free Figure Matching">Count-Curriculum: Number-Free Figure Matching</a></span>
+    <span><a href="/2023/10/27/Chess_video_game/" title="Chess Video Game"><span class="lang-en">Chess Video Game</span><span class="lang-zh">国际象棋电子游戏</span></a></span>
   </li>
 
       
@@ -386,7 +431,7 @@ In the input state, we need to refresh the value of the message and then update 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2026/03/19/ControlScene/" title="ControlScene: Controllable Text-to-3D Scene Generation">ControlScene: Controllable Text-to-3D Scene Generation</a></span>
+    <span><a href="/2023/10/27/Hex_Bots/" title="Hex"><span class="lang-en">Hex</span><span class="lang-zh">Hex 六贯棋</span></a></span>
   </li>
 
       
@@ -395,7 +440,7 @@ In the input state, we need to refresh the value of the message and then update 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2022/05/19/Search_engine_in_a_room/" title="Search Engine">Search Engine</a></span>
+    <span><a href="/2026/03/05/VVM_Tuning/" title="Generalize LMMs to Versatile Visual Modalities"><span class="lang-en">Generalize LMMs to Versatile Visual Modalities</span><span class="lang-zh">将多模态大模型泛化到多样视觉模态</span></a></span>
   </li>
 
       
@@ -404,7 +449,7 @@ In the input state, we need to refresh the value of the message and then update 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Hex_Bots/" title="Hex">Hex</a></span>
+    <span><a href="/2023/10/27/Maze_Solver/" title="Maze Solver"><span class="lang-en">Maze Solver</span><span class="lang-zh">迷宫求解器</span></a></span>
   </li>
 
       
@@ -413,7 +458,7 @@ In the input state, we need to refresh the value of the message and then update 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Snake_Game/" title="Snake Game">Snake Game</a></span>
+    <span><a href="/2026/03/15/Count_Curriculum/" title="Count-Curriculum: Number-Free Figure Matching"><span class="lang-en">Count-Curriculum: Number-Free Figure Matching</span><span class="lang-zh">Count-Curriculum：无编号的论文图表匹配</span></a></span>
   </li>
 
       
@@ -422,7 +467,7 @@ In the input state, we need to refresh the value of the message and then update 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2026/02/13/Video_Restoration/" title="Task-Uncertainty-Aware Video Restoration">Task-Uncertainty-Aware Video Restoration</a></span>
+    <span><a href="/2026/03/19/ControlScene/" title="ControlScene: Controllable Text-to-3D Scene Generation"><span class="lang-en">ControlScene: Controllable Text-to-3D Scene Generation</span><span class="lang-zh">ControlScene：可控的文本到三维场景生成</span></a></span>
   </li>
 
       
@@ -431,7 +476,7 @@ In the input state, we need to refresh the value of the message and then update 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Maze_Solver/" title="Maze Solver">Maze Solver</a></span>
+    <span><a href="/2023/10/27/Snake_Game/" title="Snake Game"><span class="lang-en">Snake Game</span><span class="lang-zh">贪吃蛇游戏</span></a></span>
   </li>
 
       
@@ -440,7 +485,7 @@ In the input state, we need to refresh the value of the message and then update 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2022/04/15/Interactive_Systems/" title="Interactive Systems">Interactive Systems</a></span>
+    <span><a href="/2022/04/15/Interactive_Systems/" title="Interactive Systems"><span class="lang-en">Interactive Systems</span><span class="lang-zh">交互式系统</span></a></span>
   </li>
 
       
@@ -449,7 +494,7 @@ In the input state, we need to refresh the value of the message and then update 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/A_Fuzzy_Logic-based_Washing_Machine/" title="A Fuzzy Logic-based Washing Machine">A Fuzzy Logic-based Washing Machine</a></span>
+    <span><a href="/2022/05/19/Search_engine_in_a_room/" title="Search Engine"><span class="lang-en">Search Engine</span><span class="lang-zh">房间里的搜索引擎</span></a></span>
   </li>
 
       
@@ -458,13 +503,13 @@ In the input state, we need to refresh the value of the message and then update 
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/10/27/Chess_video_game/" title="Chess Video Game">Chess Video Game</a></span>
+    <span><a href="/2022/05/30/Vehicle_Poses/" title="Features for Estimating Autonomous Vehicle Poses"><span class="lang-en">Features for Estimating Autonomous Vehicle Poses</span><span class="lang-zh">用于估计自动驾驶车辆位姿的视觉特征</span></a></span>
   </li>
 
   </ul>
 </div>
 <div>
-  <h2>Recent Comments</h2>
+  <h2><span class="lang-en">Recent Comments</span><span class="lang-zh">最新评论</span></h2>
   <ul class="leancloud-recent-comment"></ul>
 </div>
 
@@ -480,7 +525,7 @@ In the input state, we need to refresh the value of the message and then update 
     <span class="author" itemprop="copyrightHolder">Ruyi Zhang @ Ruyi Zhang</span>
   </div>
   <div class="powered-by">
-    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+    <span class="lang-en">Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></span><span class="lang-zh">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></span>
   </div>
 </div>
 

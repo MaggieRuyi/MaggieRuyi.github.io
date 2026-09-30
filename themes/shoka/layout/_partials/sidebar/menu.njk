@@ -5,7 +5,7 @@
     {%- set itemURL = itemURL | replace('//', '/') %}
   {%- endif %}
   {%- set menuIcon = '<i class="ic i-' + path[1] | trim + '"></i>' %}
-  {%- set menuText = __('menu.' + name) | replace('menu.', '') %}
+  {%- set menuText = _t('menu.' + name) | replace('menu.', '') %}
   {%- if parent %}
   <li class="item dropdown">
     {%- if itemURL == '/' %}
